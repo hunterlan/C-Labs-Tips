@@ -44,6 +44,7 @@ void Task1(char * txt, int countShift)
 	{
 		temp[i] = txt[i];
 	}
+	temp[size] = '\0';
 	for (int i = 0; i < countShift; i++)
 	{
 		for (int j = 0; j < size; j++)

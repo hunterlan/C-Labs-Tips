@@ -13,7 +13,7 @@ int main()
 	//DeleteCharFromText(demo1, 4, 8);
 	int userWantsShift = 0;
 	printf("How many times we must shift the text?");
-	scanf_s("%d", userWantsShift);
+	scanf_s("%i", &userWantsShift);
 	Task1(demo3, 2);
 	printf("It's resual, sir: ");
 	printf("%s", demo3);
