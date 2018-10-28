@@ -1,0 +1,28 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Task1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_lab08_8cpp.html#a981008700b24339f2f3510a01188a336",tooltip="Перше завдання. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="makingDoubleArr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_ops_with_array_8cpp.html#a002e4cd5dc8b13c850a45a9094f24cf5",tooltip="Добавляємо адреса для значення двумірних масивів "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="FillArrRandNum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_ops_with_array_8cpp.html#af6a20faa2d4c3626bd95edb75df41e4c",tooltip="Заповнюємо двумірний масив "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ClearArr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_ops_with_array_8cpp.html#a9c52eb906fac8dc0d43249b2e83e219d",tooltip="Очищаєм пам&#39;ять від масиву "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Task2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_lab08_8cpp.html#a48ca17e52cd2a385f36d93d00e135083"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Task3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_lab08_8cpp.html#a1d00ae2cc8d58d5922cbf8af0e4e53b0"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Task4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_lab08_8cpp.html#a7618b749201fb6514c7c54fa9fd6fbe9"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="SortFromSmallToBig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_ops_with_array_8cpp.html#a75a29c3fa2671f3d198f5a70965a92de",tooltip="Сортируємо за возрастанням одномірний масив "];
+}
