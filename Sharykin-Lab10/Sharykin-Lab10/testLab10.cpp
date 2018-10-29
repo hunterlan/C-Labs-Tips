@@ -6,9 +6,9 @@ void DeleteCharFromText(char * txt, int pos1, int pos2);
 
 int main()
 {
-	char *demo1 = (char *)"abrakadabra";
-	char *demo2 = (char *)"TEXT2";
-	char *demo3 = (char *)"Secret Programming";
+	char demo1[] = "abrakadabra";
+	char demo2[] = "TEXT2";
+	char demo3[] = "Secret Programming";
 	//Insert(demo1, demo2, 4);
 	//DeleteCharFromText(demo1, 4, 8);
 	int userWantsShift = 0;
@@ -17,9 +17,6 @@ int main()
 	Task1(demo3, 2);
 	printf("It's resual, sir: ");
 	printf("%s", demo3);
-	free(demo1);
-	free(demo2);
-	free(demo3);
 	return 0;
 }
 

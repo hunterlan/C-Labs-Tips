@@ -39,12 +39,12 @@ void CheckPosNotNegative(int * pos)
 void Task1(char * txt, int countShift)
 {
 	int size = IdentifySize(txt);
-	char * temp = (char *)malloc(size * sizeof(char));
+	char * temp = (char *)malloc(size+1 * sizeof(char));
 	for (int i = 0; i < size; i++)
 	{
 		temp[i] = txt[i];
 	}
-	temp[size-1] = '\0';
+	temp[size] = '\0';
 	for (int i = 0; i < countShift; i++)
 	{
 		for (int j = 0; j < size; j++)
