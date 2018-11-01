@@ -47,6 +47,9 @@
 <div class="title">Файл Tasks.h</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Заголовчний файл Tasks.  
+<a href="#details">Детальніше...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
@@ -60,7 +63,7 @@
 <div class="dyncontent">
 <div class="center"><img src="_tasks_8h__dep__incl.png" border="0" usemap="#_tasks_8hdep" alt=""/></div>
 <map name="_tasks_8hdep" id="_tasks_8hdep">
-<area shape="rect" id="node2" href="_tasks_8cpp.html" title="Tasks.cpp" alt="" coords="5,80,88,107"/>
+<area shape="rect" id="node2" href="_tasks_8cpp.html" title="Файл, у якому реалізовані прототипі функції з Tasks.h. " alt="" coords="5,80,88,107"/>
 <area shape="rect" id="node3" href="test_lab10_8cpp.html" title="Головний файл " alt="" coords="112,80,216,107"/>
 </map>
 </div>
@@ -72,13 +75,22 @@
 <tr class="memitem:ae715a7725ee34f3ab1ff2bbd8d84321d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tasks_8h.html#ae715a7725ee34f3ab1ff2bbd8d84321d">Encryption</a> (char *txt, int countShift)</td></tr>
 <tr class="separator:ae715a7725ee34f3ab1ff2bbd8d84321d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fd08dd9dfde96252045c4bc467cddca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tasks_8h.html#a6fd08dd9dfde96252045c4bc467cddca">Decryption</a> (char *txt, int countShift)</td></tr>
+<tr class="memdesc:a6fd08dd9dfde96252045c4bc467cddca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функція, яка дешифровує текст Послідовність дій:  <a href="#a6fd08dd9dfde96252045c4bc467cddca">Детальніше...</a><br /></td></tr>
 <tr class="separator:a6fd08dd9dfde96252045c4bc467cddca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ebb23af1bf0399ee9f30131d2437542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tasks_8h.html#a2ebb23af1bf0399ee9f30131d2437542">CheckPos</a> (int size, int *pos)</td></tr>
+<tr class="memdesc:a2ebb23af1bf0399ee9f30131d2437542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функція, яка перевіряє, чи позиція більше розміру.  <a href="#a2ebb23af1bf0399ee9f30131d2437542">Детальніше...</a><br /></td></tr>
 <tr class="separator:a2ebb23af1bf0399ee9f30131d2437542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab70a1a63045422292dc0a028812d787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tasks_8h.html#aab70a1a63045422292dc0a028812d787">CheckPosNotNegative</a> (int *pos)</td></tr>
+<tr class="memdesc:aab70a1a63045422292dc0a028812d787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функція, яка перевіряє, чи позиція від'ємна<br />
+ Послідовність дій:  <a href="#aab70a1a63045422292dc0a028812d787">Детальніше...</a><br /></td></tr>
 <tr class="separator:aab70a1a63045422292dc0a028812d787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Опис функцій</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Заголовчний файл Tasks. </p>
+<dl class="section author"><dt>Автор</dt><dd>Шарикін Костянтин </dd></dl>
+<dl class="section version"><dt>Версія</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>2018.10.29 </dd></dl>
+</div><h2 class="groupheader">Опис функцій</h2>
 <a id="a2ebb23af1bf0399ee9f30131d2437542"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ebb23af1bf0399ee9f30131d2437542">&#9670;&nbsp;</a></span>CheckPos()</h2>
 
@@ -105,6 +117,31 @@
       </table>
 </div><div class="memdoc">
 
+<p>Функція, яка перевіряє, чи позиція більше розміру. </p>
+<p><br />
+ Послідовність дій: </p><ul>
+<li>
+Якщо розмір менш за позицію, то тоді ми від позиції віднімаємо значення розмір символьного масиву </li>
+<li>
+Якщо розмір дорівнює позіції, то ми віднімаємо 1 </li>
+</ul>
+<ul>
+<li><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>- розмір символьного масиву</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+<li><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>- якась позиція </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
 </div>
 </div>
 <a id="aab70a1a63045422292dc0a028812d787"></a>
@@ -122,6 +159,19 @@
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Функція, яка перевіряє, чи позиція від'ємна<br />
+ Послідовність дій: </p>
+<ul>
+<li>
+Якщо позиція менш, ніж 0, тоді ми робимо позицию додатнє </li>
+</ul>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>- якась позиція </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -151,6 +201,23 @@
       </table>
 </div><div class="memdoc">
 
+<p>Функція, яка дешифровує текст Послідовність дій: </p>
+<ul>
+<li>
+Cтворення змінних </li>
+<li>
+Копює масив та додаємо \0 </li>
+<li>
+Дешифруємо текст у циклі методом перестановкої </li>
+</ul>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">txt</td><td>- символьни масив, якій потрібно дешифрувати </td></tr>
+    <tr><td class="paramname">countShift</td><td>- кількість перестановок у тексті </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae715a7725ee34f3ab1ff2bbd8d84321d"></a>
@@ -179,7 +246,23 @@
       </table>
 </div><div class="memdoc">
 <ol type="1">
-<li>«Зашифрувати» вхідний текст, для чого в кожному рядку тексту виконати циклічну перестановку символів на n позицій вправо ( i-й символ стає i+1-м, а останній – першим). Значення n ввести з клавіатури. </li>
+<li>«Зашифрувати» вхідний текст, для чого в кожному рядку тексту виконати циклічну перестановку символів на n позицій вправо ( i-й символ стає i+1-м, а останній – першим). Значення n ввести з клавіатури. Функція, яка шифрує текст<br />
+ Послідовність дій: <ul>
+<li>
+Cтворення змінних </li>
+<li>
+Копює масив та додаємо \0 </li>
+<li>
+Шифруємо текст у циклі методом перестановкі </li>
+</ul>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">txt</td><td>- символьни масив, якій потрібно зашифрувати </td></tr>
+    <tr><td class="paramname">countShift</td><td>- кількість перестановок у тексті </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
 </ol>
 
 </div>

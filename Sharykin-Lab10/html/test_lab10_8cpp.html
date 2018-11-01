@@ -50,14 +50,13 @@
 
 <p>Головний файл  
 <a href="#details">Детальніше...</a></p>
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="_tasks_8h_source.html">Tasks.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_tasks_8h_source.html">Tasks.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Діаграма включених заголовочних файлів для testLab10.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_lab10_8cpp__incl.png" border="0" usemap="#test_lab10_8cpp" alt=""/></div>
 <map name="test_lab10_8cpp" id="test_lab10_8cpp">
-<area shape="rect" id="node3" href="_tasks_8h.html" title="Tasks.h" alt="" coords="86,80,154,107"/>
+<area shape="rect" id="node2" href="_tasks_8h.html" title="Заголовчний файл Tasks. " alt="" coords="90,80,158,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -112,13 +111,40 @@
 </div><div class="memdoc">
 
 <p>Прототип функції DeleteCharFromText. </p>
+<p>Функція для очищеня буквів у заданому діапозоні<br />
+ Опис змінних:<br />
+ int sizeTxtрозмір двух передаваємого тексту<br />
+ int sizeResult - розмір результуючего масиву<br />
+ int k - лічильники.</p>
+<p><br />
+ char * result - масив символів.<br />
+ Послідовність дій: </p><ul>
+<li>
+Cтворення змінних </li>
+<li>
+З'ясовуємо розмір передаваємого тексту </li>
+<li>
+Переверяємо передаваєму позицію за допомогою функції <a class="el" href="_tasks_8h.html#aab70a1a63045422292dc0a028812d787">CheckPosNotNegative</a>, <a class="el" href="_tasks_8h.html#a2ebb23af1bf0399ee9f30131d2437542">CheckPos</a> </li>
+<li>
+Находимо результуючий розмір та записуємо результат у sizeResult </li>
+<li>
+Очищаємо букви у діапозоні </li>
+</ul>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">txt</td><td>- символьний масив </td></tr>
+    <tr><td class="paramname">pos1</td><td>- діапозон "від" </td></tr>
+    <tr><td class="paramname">pos2</td><td>- діапозон "до" </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Граф всіх викликів цієї функції:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_lab10_8cpp_a5d027a927e88237024bdb2e8006ffb45_cgraph.png" border="0" usemap="#test_lab10_8cpp_a5d027a927e88237024bdb2e8006ffb45_cgraph" alt=""/></div>
 <map name="test_lab10_8cpp_a5d027a927e88237024bdb2e8006ffb45_cgraph" id="test_lab10_8cpp_a5d027a927e88237024bdb2e8006ffb45_cgraph">
-<area shape="rect" id="node2" href="_tasks_8cpp.html#aab70a1a63045422292dc0a028812d787" title="CheckPosNotNegative" alt="" coords="195,5,345,32"/>
-<area shape="rect" id="node3" href="_tasks_8cpp.html#a2ebb23af1bf0399ee9f30131d2437542" title="CheckPos" alt="" coords="229,56,311,83"/>
+<area shape="rect" id="node2" href="_tasks_8cpp.html#aab70a1a63045422292dc0a028812d787" title="Функція, яка перевіряє, чи позиція від&#39;ємна &#160;Послідовність дій: " alt="" coords="195,5,345,32"/>
+<area shape="rect" id="node3" href="_tasks_8cpp.html#a2ebb23af1bf0399ee9f30131d2437542" title="Функція, яка перевіряє, чи позиція більше розміру. " alt="" coords="229,56,311,83"/>
 </map>
 </div>
 
@@ -157,13 +183,40 @@
 </div><div class="memdoc">
 
 <p>Прототип функції Insert. </p>
+<p>Функція для вставкі другого тексту у перший.</p>
+<p><br />
+ Опис змінних:<br />
+ int sizeTxt1, sizeTxt2 - розмір двух передаваємих текстів<br />
+ int sizeResult - розмір результуючего масиву<br />
+ int i, j, k - лічильники.<br />
+ char * result - масив символів.<br />
+ Послідовність дій: </p><ul>
+<li>
+Cтворення змінних </li>
+<li>
+З'ясовуємо розмір передаваємого тексту </li>
+<li>
+Переверяємо передаваєму позицію за допомогою функції <a class="el" href="_tasks_8h.html#aab70a1a63045422292dc0a028812d787">CheckPosNotNegative</a>, <a class="el" href="_tasks_8h.html#a2ebb23af1bf0399ee9f30131d2437542">CheckPos</a> </li>
+<li>
+Сумміруєм два розміра та записуємо результат у sizeResult </li>
+<li>
+Вставляємо другий текст у перший. </li>
+</ul>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">txt1</td><td>- перший символьний масив </td></tr>
+    <tr><td class="paramname">txt2</td><td>- другий символьний масив </td></tr>
+    <tr><td class="paramname">pos</td><td>- після якої букви ми будемо вставляти другий текст у перший </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Граф всіх викликів цієї функції:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_lab10_8cpp_a12779d3f6b74ed7eece19bbcbcbd86ca_cgraph.png" border="0" usemap="#test_lab10_8cpp_a12779d3f6b74ed7eece19bbcbcbd86ca_cgraph" alt=""/></div>
 <map name="test_lab10_8cpp_a12779d3f6b74ed7eece19bbcbcbd86ca_cgraph" id="test_lab10_8cpp_a12779d3f6b74ed7eece19bbcbcbd86ca_cgraph">
-<area shape="rect" id="node2" href="_tasks_8cpp.html#aab70a1a63045422292dc0a028812d787" title="CheckPosNotNegative" alt="" coords="108,5,259,32"/>
-<area shape="rect" id="node3" href="_tasks_8cpp.html#a2ebb23af1bf0399ee9f30131d2437542" title="CheckPos" alt="" coords="142,56,225,83"/>
+<area shape="rect" id="node2" href="_tasks_8cpp.html#aab70a1a63045422292dc0a028812d787" title="Функція, яка перевіряє, чи позиція від&#39;ємна &#160;Послідовність дій: " alt="" coords="108,5,259,32"/>
+<area shape="rect" id="node3" href="_tasks_8cpp.html#a2ebb23af1bf0399ee9f30131d2437542" title="Функція, яка перевіряє, чи позиція більше розміру. " alt="" coords="142,56,225,83"/>
 </map>
 </div>
 
@@ -185,7 +238,8 @@
 </div><div class="memdoc">
 
 <p>Головна функція. </p>
-<p>Послідовність дій: </p><ul>
+<p><br />
+ Опис змінних: char demo1[], demo2[], demo3[] - символьний масив int userWantsShift - цілочислений тип, у якому зберігається значення, скільки буде перестановок у тексті Послідовність дій: </p><ul>
 <li>
 Cтворення змінних </li>
 <li>
@@ -196,14 +250,13 @@ Cтворення змінних </li>
 Викликаємо функції <a class="el" href="_tasks_8h.html#ae715a7725ee34f3ab1ff2bbd8d84321d">Encryption</a> и <a class="el" href="_tasks_8h.html#a6fd08dd9dfde96252045c4bc467cddca">Decryption</a> та виводимо результат у консоль </li>
 </ul>
 <dl class="section return"><dt>Повертає</dt><dd>успешний код повернення з програми (0) </dd></dl>
-<p>&lt; Символьный массив с каким то текстом </p>
 <div class="dynheader">
 Граф всіх викликів цієї функції:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_lab10_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#test_lab10_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 <map name="test_lab10_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="test_lab10_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
 <area shape="rect" id="node2" href="_tasks_8cpp.html#ae715a7725ee34f3ab1ff2bbd8d84321d" title="Encryption" alt="" coords="104,5,188,32"/>
-<area shape="rect" id="node3" href="_tasks_8cpp.html#a6fd08dd9dfde96252045c4bc467cddca" title="Decryption" alt="" coords="104,56,188,83"/>
+<area shape="rect" id="node3" href="_tasks_8cpp.html#a6fd08dd9dfde96252045c4bc467cddca" title="Функція, яка дешифровує текст Послідовність дій: " alt="" coords="104,56,188,83"/>
 </map>
 </div>
 
