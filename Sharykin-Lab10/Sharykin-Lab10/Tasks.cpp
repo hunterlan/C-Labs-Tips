@@ -1,13 +1,4 @@
 #include"Tasks.h"
-int IdentifySize(char * txt)
-{
-	int i = 0;
-	while (txt[i] != '\0')
-	{
-		i++;
-	}
-	return i;
-}
 
 void CheckPos(int size, int * pos)
 {
@@ -38,7 +29,7 @@ void CheckPosNotNegative(int * pos)
 
 void Encryption(char * txt, int countShift)
 {
-	int size = IdentifySize(txt);
+	int size = strlen(txt);
 	char * temp = (char *)malloc(size+1 * sizeof(char));
 	for (int i = 0; i < size; i++)
 	{
@@ -77,7 +68,7 @@ void Decryption(char * txt, int countShift)
 		{
 			if (j == 0)
 			{
-				txt[j] = temp[size];
+				txt[j] = temp[size-1];
 			}
 			else
 			{

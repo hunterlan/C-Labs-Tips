@@ -29,8 +29,8 @@ void Insert(char * txt1, char * txt2, int pos)
 {
 	int sizeTxt1, sizeTxt2, sizeResult, i = 0, j = 0, k = 0;
 	char * result;
-	sizeTxt1 = IdentifySize(txt1);
-	sizeTxt2 = IdentifySize(txt2);
+	sizeTxt1 = strlen(txt1);
+	sizeTxt2 = strlen(txt2);
 	CheckPosNotNegative(&pos);
 	CheckPos(sizeTxt1, &pos);
 	sizeResult = sizeTxt1 + sizeTxt2;
@@ -60,7 +60,7 @@ void DeleteCharFromText(char * txt, int pos1, int pos2)
 	int sizeTxt, sizeResult, k = 0;
 	CheckPosNotNegative(&pos1);
 	CheckPosNotNegative(&pos2);
-	sizeTxt = IdentifySize(txt);
+	sizeTxt = strlen(txt);
 	sizeResult = sizeTxt - (pos2 - pos1);
 	result = (char *)malloc(sizeResult * sizeof(char));
 	CheckPos(sizeTxt, &pos1);

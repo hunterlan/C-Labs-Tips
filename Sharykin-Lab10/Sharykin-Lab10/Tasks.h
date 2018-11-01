@@ -5,7 +5,6 @@
 #include<string.h>
 void Encryption(char * txt, int countShift);
 void Decryption(char * txt, int countShift);
-int IdentifySize(char * txt);
 void CheckPos(int size, int * pos);
 void CheckPosNotNegative(int * pos);
 #endif
