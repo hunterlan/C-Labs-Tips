@@ -40,10 +40,11 @@ void DeleteCharFromText(char * txt, int pos1, int pos2);
 
 
 /**
-* Головна функція.
-*
-*
-*
+* Головна функція.<br>
+* Опис змінниж:
+* char demo1[], demo2[], demo3[] - символьний масив
+* int userWantsShift - цілочислений тип, у якому зберігається значення, скільки буде перестановок
+* у тексті
 * Послідовність дій:
 * <ul>
 * <li>Cтворення змінних</li>
@@ -55,7 +56,7 @@ void DeleteCharFromText(char * txt, int pos1, int pos2);
 */
 int main()
 {
-	char demo1[] = "abrakadabra";
+	char demo1[] = "abrakadabra"; 
 	char demo2[] = "TEXT2";
 	char demo3[] = "Secret Programming";
 	//Insert(demo1, demo2, 4);
@@ -73,6 +74,22 @@ int main()
 	printf("%s", demo3);
 	return 0;
 }
+
+/**
+* Функція для вставкі другого тексту у перший.<br>
+* Опис змінниж:
+* char demo1[], demo2[], demo3[] - символьний масив
+* int userWantsShift - цілочислений тип, у якому зберігається значення, скільки буде перестановок
+* у тексті
+* Послідовність дій:
+* <ul>
+* <li>Cтворення змінних</li>
+* <li>Прохаємо користувача написати кількість перестановок у тексті</li>
+* <li>Переносимо значення у змінну</li>
+* <li>Викликаємо функції {@link Encryption} и {@link Decryption} та виводимо результат у консоль</li>
+* </ul>
+* @return успешний код повернення з програми (0)
+*/
 
 void Insert(char * txt1, char * txt2, int pos)
 {
