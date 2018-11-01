@@ -55,7 +55,7 @@ void DeleteCharFromText(char * txt, int pos1, int pos2);
 */
 int main()
 {
-	char demo1[] = "abrakadabra";///<якињсь текст 
+	char demo1[] = "abrakadabra";
 	char demo2[] = "TEXT2";
 	char demo3[] = "Secret Programming";
 	//Insert(demo1, demo2, 4);
