@@ -12,10 +12,15 @@ int main()
 	//Insert(demo1, demo2, 4);
 	//DeleteCharFromText(demo1, 4, 8);
 	int userWantsShift = 0;
-	printf("How many times we must shift the text?");
+	printf("How many times we must shift the text? ");
 	scanf_s("%i", &userWantsShift);
-	Task1(demo3, 2);
-	printf("It's resual, sir: ");
+	Encryption(demo3, userWantsShift);
+	printf("\n");
+	printf("It's resual encryption, sir: \n");
+	printf("%s", demo3);
+	Decryption(demo3, userWantsShift);
+	printf("\n");
+	printf("It's resual decryption, sir: ");
 	printf("%s", demo3);
 	return 0;
 }
