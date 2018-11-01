@@ -21,9 +21,15 @@
     <ClCompile Include="WriteAndRead.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="WorkWithArr.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WriteAndRead.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkWithArr.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

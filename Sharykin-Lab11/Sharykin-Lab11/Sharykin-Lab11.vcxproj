@@ -116,9 +116,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="testLab11.cpp" />
+    <ClCompile Include="WorkWithArr.cpp" />
     <ClCompile Include="WriteAndRead.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="WorkWithArr.h" />
     <ClInclude Include="WriteAndRead.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

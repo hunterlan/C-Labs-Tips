@@ -27,3 +27,20 @@ void WriteToFile(char * nameFile, char * txt)
 	}
 	fclose(fp);
 }
+
+long GetLengthSymbInFile(char * nameFile)
+{
+	long sizeTxt;
+	FILE *stream;
+	if ((stream = fopen(nameFile, "r")) == NULL)
+	{
+		printf("Cannot open file.\n");
+		sizeTxt = 0;
+	}
+	else
+	{
+		fseek(stream, 0, SEEK_END);
+		sizeTxt = ftell(stream);
+	}
+	return sizeTxt;
+}
