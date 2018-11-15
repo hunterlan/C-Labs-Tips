@@ -9,4 +9,3 @@ void WriteToFile(char * nameFile, char * txt);
 long GetLengthSymbInFile(char * nameFile);
 
 #endif WRITEANDREAD_H_
-

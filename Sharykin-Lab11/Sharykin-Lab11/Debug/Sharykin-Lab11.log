@@ -1,0 +1,6 @@
+﻿  WriteAndRead.cpp
+e:\gits\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(15): warning C4473: "fscanf_s": передано недостаточно аргументов для строки формата
+  e:\gits\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(15): note: заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+  e:\gits\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(15): note: отсутствующий вариативный аргумент "2" требуется для строки форматирования "%s"
+  e:\gits\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(15): note: этот аргумент используется в качестве размера буфера
+  Sharykin-Lab11.vcxproj -> E:\Gits\Labs-Work\Sharykin-Lab11\Debug\Sharykin-Lab11.exe

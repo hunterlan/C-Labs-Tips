@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "WorkWithArr.h"
 
 void CheckPos(int size, int * pos)
@@ -22,7 +23,9 @@ void CheckPosNotNegative(int * pos)
 
 void Insert(int pos, char * nameFile1, char * nameFile2)
 {
-	char * txt1, char * txt2, char * result;
+	char * txt1;
+	char * txt2;
+	char * result;
 	int sizeTxt1, sizeTxt2, sizeResult, i = 0, j = 0, k = 0;
 
 	sizeTxt1 = GetLengthSymbInFile(nameFile1);
@@ -54,21 +57,35 @@ void Insert(int pos, char * nameFile1, char * nameFile2)
 	}
 	result[sizeResult] = '\0';
 
-	char * nameResultedFile = (char *)malloc((strlen(nameFile1) + 2) * sizeof(char));
-	for (i = 0; i < (strlen(nameFile1) + 2); i++)
+	char * nameResultedFile = (char *)malloc((strlen(nameFile1) + 1) * sizeof(char));
+	int posDot = 0;
+	for (i = 0; i < strlen(nameFile1); i++)
 	{
-		if (i == strlen(nameFile1))
+		if (nameFile1[i] == (char)".")
 		{
-			nameResultedFile[strlen(nameFile1)] = 'I';
-			nameResultedFile[strlen(nameFile1) + 1] = 'n';
-			nameResultedFile[strlen(nameFile1) + 2] = '\0';
+			posDot = i;
 		}
 	}
-
+	for (int i = 0; i < (strlen(nameFile1) + 1); i++)
+	{
+		if (i < posDot)
+		{
+			nameResultedFile[i] = nameFile1[i];
+		}
+		else if (i == posDot)
+		{
+			nameResultedFile[i] = (char)"N";
+		}
+		else
+		{
+			nameResultedFile[i] = nameFile1[i-1];
+		}
+	}
+	nameResultedFile[strlen(nameFile1) + 1] = '\0';
 	WriteToFile(nameResultedFile, result);
 
-	free(nameResultedFile);
-	free(result);
+	//free(nameResultedFile);
+	//free(result);
 	free(txt1);
 	free(txt2);
 }

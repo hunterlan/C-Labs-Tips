@@ -2,6 +2,10 @@
 #define WORKWITHARR_H_
 
 #include"WriteAndRead.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
 
 void CheckPos(int size, int * pos);
 void CheckPosNotNegative(int * pos);
