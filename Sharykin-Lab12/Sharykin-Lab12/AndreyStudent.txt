@@ -1,0 +1,10 @@
+Andrey
+Lozhnikov
+Andreevich
+Ukraine, Donetska District, Donetsk, Lenina street, 92
++380971234567
+true
+false
+175.1
+175.0
+175.3
