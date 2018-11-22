@@ -1,0 +1,7 @@
+﻿  testLab12.cpp
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(144): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(145): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(146): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(147): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(148): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  Sharykin-Lab12.vcxproj -> E:\Gits\Labs-Work\Sharykin-Lab12\Debug\Sharykin-Lab12.exe

@@ -1,41 +1,53 @@
 #include"Structs.h"
-struct Student
-{
-	char firstName[50];
-	char lastName[80];
-	char patronyminc[60];
-	char homeAdress[200];
-	char phoneNumber[13];
-	bool isLiveInHostel;
-	bool isGetAScholapship;
-	float markZNO[3];
-};
 
-struct Worker
+void Student::ShowData()
 {
-	char firstName[50];
-	char lastName[80];
-	char patronyminc[60];
-	int birthday[3];
-	char position[100];
-	int salary;
-	bool isWorkerTeacher;
-};
+	printf("Frist name: %s", &firstName);
+	printf("\nLast name: %s", &lastName);
+	printf("\nPatronymic: %s", &patronyminc);
+	printf("\nHome adress:\n\t   Country: %s", &country);
+	printf("\n\t   Discrict: %s", &disctrict);
+	printf("\n\t   City: %s", &city);
+	printf("\nPhone number: %s", &phoneNumber);
+	if (isLiveInHostel == 1)
+	{
+		printf("\nLive in hostel: true");
+	}
+	else
+	{
+		printf("\nLive in hostel: false");
+	}
+	if (isGetAScholarship == 1)
+	{
+		printf("\nGetting a scholar ship: true");
+	}
+	else
+	{
+		printf("\nGetting a scholar ship: true");
+	}
+	printf("\nFirst mark of exam: %.3f", markZNO[0]);
+	printf("\nSecond mark of exam: %.3f", markZNO[1]);
+	printf("\nThird mark of exam: %.3f", markZNO[2]);
+	printf("\n");
+}
 
-struct Laptop
+void Worker::ShowData()
 {
-	float sizeOfScreen;
-	char nameOfCompany[50];
-	char nameOfModel[50];
-	bool isHaveBluetooth;
-	int countKeyOnKeyboard;
-	int price;
-	char operationSystem[50];
-};
-
-struct Product
-{
-	char nameOfProduct[100];
-	int countOfProduct;
-	float priceToBuyProduct, priceToSaleProduct;
-};
+	printf("Frist name: %s", &firstName);
+	printf("\nLast name: %s", &lastName);
+	printf("\nPatronymic: %s", &patronyminc);
+	printf("Birthday:\n");
+	printf("\t\tYear: ", birthday[0]);
+	printf("\n\t\tMonth: ", birthday[1]);
+	printf("\n\t\tDay: ", birthday[2]);
+	printf("\nPosition: %s", &position);
+	printf("\nSalary: %d", salary);
+	if (isWorkerTeacher == 1)
+	{
+		printf("\nWorker is teacher: true\n");
+	}
+	else
+	{
+		printf("\nWorker is teacher: false\n");
+	}
+}

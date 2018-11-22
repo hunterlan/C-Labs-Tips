@@ -10,7 +10,7 @@
 void CheckPos(int size, int * pos);
 void CheckPosNotNegative(int * pos);
 void Insert(int pos, char * nameFile1, char * nameFile2);
-void DeleteCharFromText(int pos2, char * nameFile);
+void DeleteCharFromText(int pos1, int pos2, char * nameFile);
 void Encryption(int countShift, char * nameFile);
 void Decryption(int countShift, char * nameFile);
 

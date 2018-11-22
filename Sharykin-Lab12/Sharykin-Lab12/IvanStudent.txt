@@ -1,10 +1,12 @@
 Ivan
 Ivanov
 Ivanovich
-Ukraine, Kievska district, Kiev, Lesya Ukrainka avenue, 88
+Ukraine
+Kievska
+Kiev
 +380977894567
-true
-true
+1
+1
 156.2
 188.1
 179.3
