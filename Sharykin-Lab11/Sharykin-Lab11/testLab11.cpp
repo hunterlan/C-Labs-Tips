@@ -20,7 +20,7 @@
 * @version 1.0  */
 
 /**
-* @file testLab10.cpp
+* @file testLab11.cpp
 * Головний файл
 * @author Шарикін Костянтин
 * @version 1.0

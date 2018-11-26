@@ -1,5 +1,17 @@
 #include"Structs.h"
 
+/**
+* @file Struct.cpp
+* Реалізація функції структур. 
+* @author Шарикін Костянтин
+* @version 1.0
+* @date 2018.11.25
+*/
+
+
+/*!
+Ця функція показує значення змінних у структурі "Студент"
+*/
 void Student::ShowData()
 {
 	printf("Frist name: %s", &firstName);
@@ -31,6 +43,9 @@ void Student::ShowData()
 	printf("\n");
 }
 
+/*!
+Ця функція показує значення змінних у структурі "Робітник"
+*/
 void Worker::ShowData()
 {
 	printf("Frist name: %s", &firstName);

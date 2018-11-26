@@ -1,6 +1,31 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include"Structs.h"
 
+/**
+* @mainpage
+* <b> Лабораторна робота № 12. <br/>  Структуровані типи даних   </b>
+* <br/><b><i>Мета роботи:</i></b>: придбати практичні навички щодо розроблення програм 
+* із застосуванням масивів структур, сумішей і перерахувань.  <br/>
+* <b>1 Завдання до роботи <br/> Основне завдання  <br/> </b>
+* ? розробити функцію, яка читає дані (масив елементів) з файлу;<br/>
+* ? розробити функцію, яка записує дані (масив елементів) у файл;<br/>
+* ? розробити функцію, яка виводить масив елементів на екран;<br/>
+* ? розробити функцію, яка буде сортирувати масив елементів за заданим критерієм (полем);<br/>
+* ? розробити функцію, яка генерує елемент прикладної галузі згідно з індивідуальним завданням<br/>
+* <b> Індивідуальне завдання: <br/> </b>
+* Прикладна галузь «СТУДЕНТ». Сформувати масив даних про студентів, які не отримують стипендію. <br/>
+* @author Шарикін Костянтин.
+* @date 29-oct-2018
+* @version 1.0  */
+
+/**
+* @file testLab12.cpp
+* Головний файл
+* @author Шарикін Костянтин
+* @version 1.0
+* @date 2018.11.25
+*/
+
 bool FillFromFileAStudent(Student * student, char * pathToFile);
 void SortStudent(struct Student * students, int sortBy, int sizeStudents);
 bool SortTwoCharElements(char * txt1, char * txt2);
@@ -9,6 +34,25 @@ bool SortTwoFloatElements(float num1, float num2);
 bool FillFromFileAWorker(Worker * worker, char * pathToFile);
 bool FillFromFileALaptop(Laptop * laptop, char * pathToFile);
 bool FillFromFileAProduct(Product * product, char * pathToFile);
+
+/**
+* Головна функція<br>
+* Послідовність дій:
+* <ul>
+* <li>Створення змінних</li>
+* <li>Просимо вказати путь до файлу у циклі. Якщо файлу не існує, тоді просимо ще раз написати путь.
+* У іншому випадку, заповнюємо елемент масиву структури студентів. { @link FillFromFileAStudent } </li>
+* <li>Потім, для індивідуального завдання, ми шукаємо кількість студентів, які не отримують студентів.</li>
+* <li>Сортируємо результат.</li>
+* <li>Виводимо на екран</li>
+* </ul>
+* Опис змінних: <br>
+* int sizeStudent - розмір динамічного масиву структуру "студент"<br>
+* int countStudentsNotGetMoney - кількість студентів, які не отримують стипендію<br>
+* Students * students - масив структуру "студент"<br>
+* Students * studentsNotGetMoney - масив структуру "студент", яка зберігає студентів, які не отримують стипендію<br>
+* char * pathToFile - зберігає путь до файлу<br>
+*/
 
 int main()
 {
@@ -137,6 +181,13 @@ int main()
 	return 0;
 }
 
+
+/*!
+Функція, яка заповнює структуру студент.
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * pathToFile - строка, яка вказує путь до файлу
+@return чи успішно були зчитані дані з файлу. 
+*/
 bool FillFromFileAStudent(struct Student * student, char * pathToFile)
 {
 	bool isSuccesfull = true;
@@ -171,6 +222,13 @@ bool FillFromFileAStudent(struct Student * student, char * pathToFile)
 	return isSuccesfull;
 }
 
+/*!
+Функція, яка заповнює структуру робітник.
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * pathToFile - строка, яка вказує путь до файлу
+@return чи успішно були зчитані дані з файлу.
+*/
+
 bool FillFromFileAWorker(Worker * worker, char * pathToFile)
 {
 	bool isSuccesfull = true;
@@ -199,8 +257,15 @@ bool FillFromFileAWorker(Worker * worker, char * pathToFile)
 		worker->salary = atoll(temp[3]);
 		worker->isWorkerTeacher = atoll(temp[4]);
 	}
-
+	return isSuccesfull;
 }
+
+/*!
+Функція, яка заповнює структуру "ноутбук".
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * pathToFile - строка, яка вказує путь до файлу
+@return чи успішно були зчитані дані з файлу.
+*/
 
 bool FillFromFileALaptop(Laptop * laptop, char * pathToFile)
 {
@@ -215,10 +280,23 @@ bool FillFromFileALaptop(Laptop * laptop, char * pathToFile)
 	{
 		char temp[4][10];
 		rewind(file);
+		fscanf(file, "%s%s%s%s%s%s%s", temp[0], laptop->nameOfCompany, laptop->nameOfModel, temp[1],
+			temp[2], temp[3], laptop->operationSystem);
+		laptop->sizeOfScreen = atof(temp[0]);
+		laptop->isHaveBluetooth = atoll(temp[1]);
+		laptop->countKeyOnKeyboard = atoll(temp[2]);
+		laptop->price = atoll(temp[3]);
 	}
 
-
+	return isSuccesfull;
 }
+
+/*!
+Функція, яка заповнює структуру продукт.
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * pathToFile - строка, яка вказує путь до файлу
+@return чи успішно були зчитані дані з файлу.
+*/
 
 bool FillFromFileAProduct(Product * product, char * pathToFile)
 {
@@ -231,10 +309,86 @@ bool FillFromFileAProduct(Product * product, char * pathToFile)
 	}
 	else
 	{
-		char temp[4][10];
+		char temp[2][10];
 		rewind(file);
+		fscanf(file, "%s%s%s%s", product->nameOfProduct, temp[0], temp[1], temp[2]);
+		product->countOfProduct = atoll(temp[0]);
+		product->priceToBuyProduct = atof(temp[1]);
+		product->priceToSaleProduct = atof(temp[2]);
 	}
+	return isSuccesfull;
 }
+
+/*!
+Функція, яка записує у файл структуру студент.
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * pathToFile - строка, яка вказує путь до файлу
+*/
+
+void WriteStudent(struct Student * student, char * pathToFile)
+{
+	FILE *file = fopen(pathToFile, "w+");
+
+	fprintf(file, "%s%s%s%s%s%s%s%i%i%f%f%f", student->firstName, student->lastName,
+		student->patronyminc, student->country, student->disctrict, student->city,
+		student->phoneNumber, student->isLiveInHostel, student->isGetAScholarship,
+		student->markZNO[0], student->markZNO[1], student->markZNO[2]);
+	fclose(file);
+}
+
+/*!
+Функція, яка записує у файл структуру робітник.
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * pathToFile - строка, яка вказує путь до файлу
+*/
+
+void WriteWorker(struct Worker * worker, char * pathToFile)
+{
+	FILE *file = fopen(pathToFile, "w+");
+
+	fprintf(file, "%s%s%s%d%d%d%s%i%i", worker->firstName, worker->lastName, worker->patronyminc,
+		worker->birthday[0], worker->birthday[1], worker->birthday[2], worker->position,
+		worker->salary, worker->isWorkerTeacher);
+	fclose(file);
+}
+
+/*!
+Функція, яка записує у файл структуру ноутбук.
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * pathToFile - строка, яка вказує путь до файлу
+*/
+
+void WriteLaptop(struct Laptop * laptop, char * pathToFile)
+{
+	FILE *file = fopen(pathToFile, "w+");
+
+	fprintf(file, "%f%s%s%d%d%d%s", laptop->sizeOfScreen, laptop->nameOfCompany,
+		laptop->nameOfModel, laptop->isHaveBluetooth, laptop->countKeyOnKeyboard,
+		laptop->price, laptop->operationSystem);
+	fclose(file);
+}
+
+/*!
+Функція, яка записує у файл структуру продукт.
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * pathToFile - строка, яка вказує путь до файлу
+*/
+
+void WriteProduct(struct Product * product, char * pathToFile)
+{
+	FILE *file = fopen(pathToFile, "w+");
+
+	fprintf(file, "%s%d%f%f", product->nameOfProduct, product->countOfProduct,
+		product->priceToBuyProduct, product->priceToSaleProduct);
+	fclose(file);
+}
+
+/*!
+Функція, яка сортирує студентів
+\param struct Student * student - вказівник на структуру "Студент"
+\param int sortBy - за яким полем будемо сортирувати
+\param int sizeStudents - розмір масиву студент
+*/
 
 void SortStudent(struct Student * students, int sortBy, int sizeStudents)
 {
@@ -376,18 +530,18 @@ void SortStudent(struct Student * students, int sortBy, int sizeStudents)
 			}
 		}
 	}break;
-	case 10:
-	{
-
-	}break;
-	case 11:
-	{
-
-	}break;
 	default:
 		break;
 	}
 }
+
+/*!
+Функція, яка визначає, чи потрібно сортирувати char елементі
+\param struct Student * student - вказівник на структуру "Студент"
+\param char * txt1 - перша строка
+\param char * txt2 - друга строка
+@return повертає, чи потрібно сортирувати ці два елемента
+*/
 
 bool SortTwoCharElements(char * txt1, char * txt2)
 {
@@ -416,6 +570,14 @@ bool SortTwoCharElements(char * txt1, char * txt2)
 	return isNeedToSort;
 }
 
+/*!
+Функція, яка визначає, чи потрібно сортирувати int елементі
+\param struct Student * student - вказівник на структуру "Студент"
+\param int num1 - перше значення int
+\param int num2 - друге значення int 
+@return повертає, чи потрібно сортирувати ці два елемента
+*/
+
 bool SortTwoIntElemnets(int num1, int num2)
 {
 	bool isNeedToSort = false;
@@ -427,6 +589,14 @@ bool SortTwoIntElemnets(int num1, int num2)
 
 	return isNeedToSort;
 }
+
+/*!
+Функція, яка визначає, чи потрібно сортирувати float елементі
+\param struct Student * student - вказівник на структуру "Студент"
+\param float num1 - перше значення float
+\param float num2 - друге значення float
+@return повертає, чи потрібно сортирувати ці два елемента
+*/
 
 bool SortTwoFloatElements(float num1, float num2)
 {
