@@ -1,5 +1,4 @@
-﻿  testLab11.cpp
-  WorkWithArr.cpp
+﻿  WorkWithArr.cpp
 g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(25): error C2062: тип "char" не требуется
 g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(34): error C2065: txt2: необъявленный идентификатор
 g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(36): error C2065: txt2: необъявленный идентификатор

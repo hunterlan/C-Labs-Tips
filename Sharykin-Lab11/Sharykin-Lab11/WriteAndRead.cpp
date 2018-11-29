@@ -3,7 +3,7 @@
 void ReadFromFile(char *nameFile, char * txt)
 {
 	FILE *fp;
-	if ((fp = fopen(nameFile, "r")) == NULL) 
+	if ((fp = fopen(nameFile, "a+")) == NULL) 
 	{
 		printf("Cannot open file.\n");
 	}
