@@ -1,26 +1,7 @@
 ﻿  WorkWithArr.cpp
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(25): error C2062: тип "char" не требуется
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(34): error C2065: txt2: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(36): error C2065: txt2: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(39): error C2065: result: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(42): error C2065: result: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(47): error C2065: result: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(47): error C2065: txt2: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(52): error C2065: result: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(55): error C2065: result: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(58): warning C4018: <: несоответствие типов со знаком и без знака
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(68): error C2065: result: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(71): error C2065: result: необъявленный идентификатор
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(73): error C2065: txt2: необъявленный идентификатор
+e:\gits\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(103): warning C4018: <: несоответствие типов со знаком и без знака
+e:\gits\labs-work\sharykin-lab11\sharykin-lab11\workwitharr.cpp(110): warning C4018: <: несоответствие типов со знаком и без знака
   WriteAndRead.cpp
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(12): warning C4473: "fscanf_s": передано недостаточно аргументов для строки формата
-  g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(12): note: заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
-  g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(12): note: отсутствующий вариативный аргумент "2" требуется для строки форматирования "%s"
-  g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(12): note: этот аргумент используется в качестве размера буфера
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(6): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note:  см. объявление "fopen"
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(20): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note:  см. объявление "fopen"
-g:\gits\hunterlan\labs-work\sharykin-lab11\sharykin-lab11\writeandread.cpp(35): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note:  см. объявление "fopen"
+  testLab11.cpp
   Создание кода...
+  Sharykin-Lab11.vcxproj -> E:\Gits\Labs-Work\Sharykin-Lab11\Debug\Sharykin-Lab11.exe

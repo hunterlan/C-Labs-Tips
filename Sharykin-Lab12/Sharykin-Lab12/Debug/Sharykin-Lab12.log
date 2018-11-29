@@ -1,0 +1,24 @@
+﻿  testLab12.cpp
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(216): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(217): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(218): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(219): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(220): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(248): warning C4477: "fscanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "int"
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(249): warning C4477: "fscanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "int"
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(250): warning C4477: "fscanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "int"
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(252): warning C4477: "fscanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "int"
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(253): warning C4477: "fscanf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "int"
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(254): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(255): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(256): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(257): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(258): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(285): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(286): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(287): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(288): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(315): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(316): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+e:\gits\labs-work\sharykin-lab12\sharykin-lab12\testlab12.cpp(317): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  Sharykin-Lab12.vcxproj -> E:\Gits\Labs-Work\Sharykin-Lab12\Debug\Sharykin-Lab12.exe
