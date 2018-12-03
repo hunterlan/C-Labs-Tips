@@ -235,6 +235,77 @@ void SortStudent(struct Student * students, int sortBy, int sizeStudents)
 	}
 }
 
+//void AddStudent(struct Student * students, int * sizeStudents)
+//{
+//	char getScholarShip[2];
+//	char liveInHostel[2];
+//	char phoneNumber[13];
+//	*sizeStudents += 1;
+//	students = (Student *)realloc(students, *sizeStudents * sizeof(Student));
+//	printf("Enter first name of student: ");
+//	scanf("%s", students[*sizeStudents].firstName);
+//	printf("Enter last name of student: ");
+//	scanf("%s", students[*sizeStudents].lastName);
+//	printf("Enter patronymic of student: ");
+//	scanf("%s", students[*sizeStudents].patronyminc);
+//	printf("Enter country of student: ");
+//	scanf("%s", students[*sizeStudents].country);
+//	printf("Enter district of student: ");
+//	scanf("%s", students[*sizeStudents].disctrict);
+//	printf("Enter city of student: ");
+//	scanf("%s", students[*sizeStudents].city);
+//	bool exit;
+//	do
+//	{
+//		exit = false;
+//		printf("Enter phone number of student: ");
+//		scanf("%s", phoneNumber);
+//		if (strlen(phoneNumber) != 13)
+//			printf("Wrong type of number!\n");
+//		else
+//		{
+//			exit = true;
+//			*(students + *sizeStudents)->phoneNumber = *phoneNumber;
+//		}
+//	} while (exit == false);
+//	do
+//	{
+//		exit = true;
+//		printf("Is student live in hostel? 1 - yes, 2 - no: ");
+//		scanf("%c", &liveInHostel);
+//		if (liveInHostel == "Y" || liveInHostel == "y")
+//			students[*sizeStudents].isLiveInHostel = 1;
+//		else if (liveInHostel == "N" || liveInHostel == "n")
+//			students[*sizeStudents].isLiveInHostel = 0;
+//		else
+//		{
+//			printf("Wrong choose!\n");
+//			exit = false;
+//		}
+//	} while (exit == false);
+//	do
+//	{
+//		exit = true;
+//		printf("Is student get a scholar ship: ");
+//		scanf("%c", &getScholarShip);
+//		if (getScholarShip == "Y" || getScholarShip == "y")
+//			students[*sizeStudents].isLiveInHostel = 1;
+//		else if (getScholarShip == "N" || getScholarShip == "n")
+//			students[*sizeStudents].isLiveInHostel = 0;
+//		else
+//		{
+//			printf("Wrong choose!\n");
+//			exit = false;
+//		}
+//	} while (exit == false);
+//	//printf("Enter mark the first exam of student: ");
+//	//scanf("%f", students[*sizeStudents].markZNO[0]);
+//	//printf("Enter mark the second exam  of student: ");
+//	//scanf("%f", students[*sizeStudents].markZNO[1]);
+//	//printf("Enter mark the third exam of student: ");
+//	//scanf("%f", students[*sizeStudents].markZNO[2]);
+//}
+
 /*!
 Функція, яка визначає, чи потрібно сортирувати char елементі
 \param struct Student * student - вказівник на структуру "Студент"
