@@ -1,6 +1,14 @@
 #include"Student.h"
 #include"testStudent.h"
 
+/**
+* @file testStudent.cpp
+* Реалізація прототипів функції для тестування
+* @author Шарикін Костянтин
+* @version 1.0
+* @date 2018.12.03
+*/
+
 void TestReadStudents(Student * students)
 {
 	struct Student testStudents;
