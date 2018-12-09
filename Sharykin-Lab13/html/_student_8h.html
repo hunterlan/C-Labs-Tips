@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sharykin-Lab: Файл Student.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sharykin-Lab
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.8.14 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Титульна&#160;сторінка</span></a></li>
+      <li><a href="annotated.html"><span>Класи</span></a></li>
+      <li class="current"><a href="files.html"><span>Файли</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Файли</span></a></li>
+      <li><a href="globals.html"><span>Елементи&#160;файлу</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Класи</a> &#124;
+<a href="#define-members">Макровизначення</a> &#124;
+<a href="#func-members">Функції</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл Student.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура студент та деякі протоипі функції до масиву структури  
+<a href="#details">Детальніше...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для Student.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_student_8h__incl.png" border="0" usemap="#_student_8h" alt=""/></div>
+<map name="_student_8h" id="_student_8h">
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлів, які включають цей файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="_student_8h__dep__incl.png" border="0" usemap="#_student_8hdep" alt=""/></div>
+<map name="_student_8hdep" id="_student_8hdep">
+<area shape="rect" id="node2" href="_student_8cpp.html" title="Реалізація прототипів функції " alt="" coords="5,80,97,107"/>
+<area shape="rect" id="node3" href="test_lab13_8cpp.html" title="Головний файл " alt="" coords="122,80,226,107"/>
+<area shape="rect" id="node4" href="test_student_8cpp.html" title="Реалізація прототипів функції для тестування " alt="" coords="250,80,365,107"/>
+</map>
+</div>
+</div>
+<p><a href="_student_8h_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Класи</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_student.html">Student</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макровизначення</h2></td></tr>
+<tr class="memitem:af08ec37a8c99d747fb60fa15bc28678b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#af08ec37a8c99d747fb60fa15bc28678b">_CRT_SECURE_NO_WARNINGS</a></td></tr>
+<tr class="separator:af08ec37a8c99d747fb60fa15bc28678b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62cd6f2297666e1a66cd5f6ffe538ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#ac62cd6f2297666e1a66cd5f6ffe538ce">STUDENT_H_</a></td></tr>
+<tr class="separator:ac62cd6f2297666e1a66cd5f6ffe538ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функції</h2></td></tr>
+<tr class="memitem:a5a85d8bd6e593274eb61b0a43bd617c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#a5a85d8bd6e593274eb61b0a43bd617c2">ReadStudents</a> (struct <a class="el" href="struct_student.html">Student</a> *students, int *sizeStudents, FILE *file)</td></tr>
+<tr class="separator:a5a85d8bd6e593274eb61b0a43bd617c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab945263f6e5a7eaee626c94dbb08db69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#ab945263f6e5a7eaee626c94dbb08db69">WriteStudents</a> (struct <a class="el" href="struct_student.html">Student</a> *students, int sizeStudents, FILE *file)</td></tr>
+<tr class="separator:ab945263f6e5a7eaee626c94dbb08db69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80b1413a057aba2ef8ed33c7d8bcd92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#ab80b1413a057aba2ef8ed33c7d8bcd92">SortStudent</a> (struct <a class="el" href="struct_student.html">Student</a> *students, int sortBy, int sizeStudents)</td></tr>
+<tr class="separator:ab80b1413a057aba2ef8ed33c7d8bcd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2addf1fb8f04d60e6d25f8a939a92c49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#a2addf1fb8f04d60e6d25f8a939a92c49">AddStudent</a> (struct <a class="el" href="struct_student.html">Student</a> *students, int *sizeStudents)</td></tr>
+<tr class="separator:a2addf1fb8f04d60e6d25f8a939a92c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f27c02b27e10b4398e78f2abc136f0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#a1f27c02b27e10b4398e78f2abc136f0a">SortTwoCharElements</a> (char *txt1, char *txt2)</td></tr>
+<tr class="separator:a1f27c02b27e10b4398e78f2abc136f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071e90e34005ba27450015c767e0bbba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#a071e90e34005ba27450015c767e0bbba">SortTwoIntElemnets</a> (int num1, int num2)</td></tr>
+<tr class="separator:a071e90e34005ba27450015c767e0bbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a901efd7b9b3bc42dd57736ae8e042"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_student_8h.html#a76a901efd7b9b3bc42dd57736ae8e042">SortTwoFloatElements</a> (float num1, float num2)</td></tr>
+<tr class="separator:a76a901efd7b9b3bc42dd57736ae8e042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Структура студент та деякі протоипі функції до масиву структури </p>
+<dl class="section author"><dt>Автор</dt><dd>Шарикін Костянтин </dd></dl>
+<dl class="section version"><dt>Версія</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>2018.12.03 </dd></dl>
+</div><h2 class="groupheader">Опис макровизначень</h2>
+<a id="af08ec37a8c99d747fb60fa15bc28678b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08ec37a8c99d747fb60fa15bc28678b">&#9670;&nbsp;</a></span>_CRT_SECURE_NO_WARNINGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _CRT_SECURE_NO_WARNINGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac62cd6f2297666e1a66cd5f6ffe538ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62cd6f2297666e1a66cd5f6ffe538ce">&#9670;&nbsp;</a></span>STUDENT_H_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STUDENT_H_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Опис функцій</h2>
+<a id="a2addf1fb8f04d60e6d25f8a939a92c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2addf1fb8f04d60e6d25f8a939a92c49">&#9670;&nbsp;</a></span>AddStudent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddStudent </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_student.html">Student</a> *&#160;</td>
+          <td class="paramname"><em>students</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>sizeStudents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a85d8bd6e593274eb61b0a43bd617c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a85d8bd6e593274eb61b0a43bd617c2">&#9670;&nbsp;</a></span>ReadStudents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReadStudents </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_student.html">Student</a> *&#160;</td>
+          <td class="paramname"><em>students</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>sizeStudents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab80b1413a057aba2ef8ed33c7d8bcd92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80b1413a057aba2ef8ed33c7d8bcd92">&#9670;&nbsp;</a></span>SortStudent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SortStudent </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_student.html">Student</a> *&#160;</td>
+          <td class="paramname"><em>students</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sortBy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sizeStudents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф всіх викликів цієї функції:</div>
+<div class="dyncontent">
+<div class="center"><img src="_student_8h_ab80b1413a057aba2ef8ed33c7d8bcd92_cgraph.png" border="0" usemap="#_student_8h_ab80b1413a057aba2ef8ed33c7d8bcd92_cgraph" alt=""/></div>
+<map name="_student_8h_ab80b1413a057aba2ef8ed33c7d8bcd92_cgraph" id="_student_8h_ab80b1413a057aba2ef8ed33c7d8bcd92_cgraph">
+<area shape="rect" id="node2" href="_student_8cpp.html#a1f27c02b27e10b4398e78f2abc136f0a" title="SortTwoCharElements" alt="" coords="145,5,296,32"/>
+<area shape="rect" id="node3" href="_student_8cpp.html#a071e90e34005ba27450015c767e0bbba" title="SortTwoIntElemnets" alt="" coords="151,56,290,83"/>
+<area shape="rect" id="node4" href="_student_8cpp.html#a76a901efd7b9b3bc42dd57736ae8e042" title="SortTwoFloatElements" alt="" coords="144,107,297,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1f27c02b27e10b4398e78f2abc136f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f27c02b27e10b4398e78f2abc136f0a">&#9670;&nbsp;</a></span>SortTwoCharElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SortTwoCharElements </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>txt1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>txt2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Функція, яка визначає, чи потрібно сортирувати char елементі </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">struct</td><td><a class="el" href="struct_student.html">Student</a> * student - вказівник на структуру "Студент" </td></tr>
+    <tr><td class="paramname">char</td><td>* txt1 - перша строка </td></tr>
+    <tr><td class="paramname">char</td><td>* txt2 - друга строка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>повертає, чи потрібно сортирувати ці два елемента </dd></dl>
+
+</div>
+</div>
+<a id="a76a901efd7b9b3bc42dd57736ae8e042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a901efd7b9b3bc42dd57736ae8e042">&#9670;&nbsp;</a></span>SortTwoFloatElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SortTwoFloatElements </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>num1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>num2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Функція, яка визначає, чи потрібно сортирувати float елементі </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">struct</td><td><a class="el" href="struct_student.html">Student</a> * student - вказівник на структуру "Студент" </td></tr>
+    <tr><td class="paramname">float</td><td>num1 - перше значення float </td></tr>
+    <tr><td class="paramname">float</td><td>num2 - друге значення float </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>повертає, чи потрібно сортирувати ці два елемента </dd></dl>
+
+</div>
+</div>
+<a id="a071e90e34005ba27450015c767e0bbba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071e90e34005ba27450015c767e0bbba">&#9670;&nbsp;</a></span>SortTwoIntElemnets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SortTwoIntElemnets </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Функція, яка визначає, чи потрібно сортирувати int елементі </p><dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">struct</td><td><a class="el" href="struct_student.html">Student</a> * student - вказівник на структуру "Студент" </td></tr>
+    <tr><td class="paramname">int</td><td>num1 - перше значення int </td></tr>
+    <tr><td class="paramname">int</td><td>num2 - друге значення int </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>повертає, чи потрібно сортирувати ці два елемента </dd></dl>
+
+</div>
+</div>
+<a id="ab945263f6e5a7eaee626c94dbb08db69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab945263f6e5a7eaee626c94dbb08db69">&#9670;&nbsp;</a></span>WriteStudents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WriteStudents </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_student.html">Student</a> *&#160;</td>
+          <td class="paramname"><em>students</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sizeStudents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

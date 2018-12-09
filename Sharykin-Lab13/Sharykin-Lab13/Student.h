@@ -2,9 +2,22 @@
 #ifndef STUDENT_H_
 #define STUDENT_H_
 
+/**
+* @file Student.h
+* Структура студент та деякі протоипі функції до масиву структури
+* @author Шарикін Костянтин
+* @version 1.0
+* @date 2018.12.03
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+
+/*
+*
+* Структура «Студент»
+*/
 
 struct Student
 {

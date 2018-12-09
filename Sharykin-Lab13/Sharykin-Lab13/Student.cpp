@@ -1,5 +1,11 @@
 #include"Student.h"
-
+/**
+* @file Student.cpp
+* Реалізація прототипів функції
+* @author Шарикін Костянтин
+* @version 1.0
+* @date 2018.12.03
+*/
 void Student::ShowData()
 {
 	printf("Frist name: %s", &firstName);
