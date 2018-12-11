@@ -3,15 +3,16 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-#include<stddef.h>
+#include<cstddef>
 #include<stdlib.h>
-#include<stdio.h>
+#include<cstdio>
+#include<conio.h>
 
 struct Student {
-	char * firstName;
-	char * lastName;
-	char * patronyminc;
-	char * group;
+	char firstName[30];
+	char lastName[50];
+	char patronyminc[80];
+	char group[20];
 };
 
 struct ListOfStudents {
