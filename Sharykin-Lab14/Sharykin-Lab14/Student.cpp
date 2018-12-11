@@ -11,8 +11,8 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 		{
 			*sizeStudents += 1;
 			students = (Student *)realloc(students, *sizeStudents * sizeof(Student));
-			fscanf(file, "%s%s%s%s", students[k].firstName, students[k].lastName, 
-				students[k].patronyminc, students[k].group);
+			fscanf(file, "%s%s%s%s", *(students+k)->firstName, *(students + k)->lastName,
+				*(students + k)->patronyminc, *(students + k)->group);
 			k++;
 			if (feof(file))
 				break;
