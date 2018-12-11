@@ -2,19 +2,22 @@
 
 bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 {
+	struct Student getStudent;
 	bool isSuccesful = false;
 	if (file != NULL)
 	{
+		isSuccesful = true;
 		rewind(file);
 		int k = 0;
 		while (1)
 		{
 			*sizeStudents += 1;
  			students = (Student *)realloc(students, *sizeStudents * sizeof(Student));
-			fscanf(file, "%s", *(students + k)->firstName);
-			fscanf(file, "%s", *(students + k)->lastName);
-			fscanf(file, "%s", *(students + k)->patronyminc);
-			fscanf(file, "%s", *(students + k)->group);
+			fscanf(file, "%s", getStudent.firstName);
+			fscanf(file, "%s", getStudent.lastName);
+			fscanf(file, "%s", getStudent.patronyminc);
+			fscanf(file, "%s", getStudent.group);
+			students[k] = getStudent;
 			k++;
 			if (feof(file))
 				break;
@@ -85,6 +88,24 @@ void PopStudentFromList(ListOfStudents ** lst)
 		free(pFwd->next);
 		pBwd->next = NULL;
 	}
+}
+
+bool WriteStudents(ListOfStudents * lst, FILE * file)
+{
+	bool isSuccesful = false;
+	if (file != NULL)
+	{
+		do
+		{
+			fprintf(file, "%s %s %s %s\n", lst->student.firstName, lst->student.lastName,
+				lst->student.patronyminc, lst->student.group);
+			//lst = lst->next;
+		} while (lst = lst->next);
+		isSuccesful = true;
+	}
+	fclose(file);
+
+	return isSuccesful;
 }
 
 bool FindStudent(ListOfStudents * lst, Student findStudent)
