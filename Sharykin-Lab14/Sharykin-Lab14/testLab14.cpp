@@ -1,6 +1,6 @@
 #include"Student.h"
 
-const int COUNT_LIST_MENU = 7;
+const int COUNT_LIST_MENU = 10;
 
 void ShowListMenu(int kX);
 void ControlMenu();
@@ -34,8 +34,9 @@ int main()
 
 void ShowListMenu(int kX)
 {
-	char listMenu[COUNT_LIST_MENU][32] = { {"Read students from file"}, {"Input student and push"},
-	{"Input student and push it back"}, {"Delete last student"}, {"Find student"},
+	char listMenu[COUNT_LIST_MENU][55] = { {"Read students from file"}, {"Input student and push"},
+	{"Input student and push it back"}, {"Input student and push it after student"},
+	{"Delete last student"}, {"Write students to file"}, {"Find student"}, {"Sort students"},
 	{"Show list of students"}, {"Exit"} };
 	for (int i = 0; i < COUNT_LIST_MENU; i++)
 	{
@@ -81,21 +82,25 @@ void ControlMenu()
 					int sizeStudents = 0;
 					Student * students = (Student *)malloc(1 * sizeof(Student));
 					char * path = (char *)malloc(255 * sizeof(char));
-					bool IsRead = false;
+					bool IsRead = true;
 					do
 					{
 						printf("Put the path to file with students: ");
 						scanf("%s", path);
-						FILE * file = fopen(path, "a+");
+						FILE * file = fopen(path, "r+");
 						if (!ReadStudents(students, &sizeStudents, file))
+						{
 							printf("Can't open this file.\n");
+							IsRead = false;
+						}
 					} while (!IsRead);
 					for (int i = 0; i < sizeStudents; i++)
 					{
+						//printf("%s", students[i]);
 						PushStudentToList(&list, students[i]);
 					}
 				}
-				else if (kX == 1 || kX == 2 || kX == 4)
+				else if (kX == 1 || kX == 2  || kX == 3 || kX == 6)
 				{
 					Student student;
 					printf("Write the first name of student: ");
@@ -110,6 +115,13 @@ void ControlMenu()
 						PushStudentToList(&list, student);
 					else if(kX == 2)
 						PushBackStudentToList(&list, student);
+					else if (kX == 3)
+					{
+						int position;
+						printf("Put the position: ");
+						scanf("%d", &position);
+						list = PushAfterStudentToList(list, student, position);
+					}
 					else
 					{
 						if (!FindStudent(list, student))
@@ -118,9 +130,29 @@ void ControlMenu()
 							printf("Student was found");
 					}
 				}
-				else if (kX == 3)
+				else if (kX == 4)
 					PopStudentFromList(&list);
 				else if (kX == 5)
+				{
+					char * path = (char *)malloc(255 * sizeof(char));
+					bool isWrite = true;
+					do
+					{
+						printf("Put the path to file with students: ");
+						scanf("%s", path);
+						FILE * file = fopen(path, "a+");
+						if (!WriteStudents(list, file))
+						{
+							isWrite = false;
+							printf("Can't write");
+						}
+					} while (!isWrite);
+				}
+				else if (kX == 7)
+				{
+					list = SortWithPointer(list, 0);
+				}
+				else if (kX == 8)
 				{
 					ShowList(list);
 					printf("\nPress any key to continue...");

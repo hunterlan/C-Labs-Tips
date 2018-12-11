@@ -20,12 +20,14 @@ struct ListOfStudents {
 	ListOfStudents * next;
 };
 
+ListOfStudents * PushAfterStudentToList(ListOfStudents * lst, Student getStudent, int pos);
 bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file);
+ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort);
 void PushBackStudentToList(ListOfStudents ** lst, Student getStudent);
 void PushStudentToList(ListOfStudents ** lst, Student getStudent);
 ListOfStudents * GetLastElemInList(ListOfStudents * lst);
 void PopStudentFromList(ListOfStudents ** lst);
-void WriteStudents(ListOfStudents * lst);
+bool WriteStudents(ListOfStudents * lst, FILE * files);
 bool FindStudent(ListOfStudents * lst, Student findStudent);
 void ShowList(ListOfStudents * lst);
 
