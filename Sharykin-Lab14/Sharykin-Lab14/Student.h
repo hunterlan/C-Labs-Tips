@@ -9,8 +9,8 @@
 #include<conio.h>
 
 struct Student {
-	char firstName[30];
-	char lastName[50];
+	char firstName[50];
+	char lastName[80];
 	char patronyminc[80];
 	char group[20];
 };
@@ -26,6 +26,7 @@ void PushStudentToList(ListOfStudents ** lst, Student getStudent);
 ListOfStudents * GetLastElemInList(ListOfStudents * lst);
 void PopStudentFromList(ListOfStudents ** lst);
 void WriteStudents(ListOfStudents * lst);
+bool FindStudent(ListOfStudents * lst, Student findStudent);
 void ShowList(ListOfStudents * lst);
 
 

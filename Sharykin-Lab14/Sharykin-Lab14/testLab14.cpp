@@ -1,6 +1,6 @@
 #include"Student.h"
 
-const int COUNT_LIST_MENU = 5;
+const int COUNT_LIST_MENU = 7;
 
 void ShowListMenu(int kX);
 void ControlMenu();
@@ -35,7 +35,8 @@ int main()
 void ShowListMenu(int kX)
 {
 	char listMenu[COUNT_LIST_MENU][32] = { {"Read students from file"}, {"Input student and push"},
-	{"Input student and push it back"}, {"Show list of students"}, {"Exit"} };
+	{"Input student and push it back"}, {"Delete last student"}, {"Find student"},
+	{"Show list of students"}, {"Exit"} };
 	for (int i = 0; i < COUNT_LIST_MENU; i++)
 	{
 		if (i == kX)
@@ -87,14 +88,14 @@ void ControlMenu()
 						scanf("%s", path);
 						FILE * file = fopen(path, "a+");
 						if (!ReadStudents(students, &sizeStudents, file))
-							printf("Can't open this file.");
+							printf("Can't open this file.\n");
 					} while (!IsRead);
 					for (int i = 0; i < sizeStudents; i++)
 					{
 						PushStudentToList(&list, students[i]);
 					}
 				}
-				else if (kX == 1 || kX == 2)
+				else if (kX == 1 || kX == 2 || kX == 4)
 				{
 					Student student;
 					printf("Write the first name of student: ");
@@ -107,14 +108,22 @@ void ControlMenu()
 					scanf("%s", &student.group);
 					if (kX == 1)
 						PushStudentToList(&list, student);
-					else
+					else if(kX == 2)
 						PushBackStudentToList(&list, student);
+					else
+					{
+						if (!FindStudent(list, student))
+							printf("Student wasn't found");
+						else
+							printf("Student was found");
+					}
 				}
 				else if (kX == 3)
+					PopStudentFromList(&list);
+				else if (kX == 5)
 				{
 					ShowList(list);
 					printf("\nPress any key to continue...");
-					getchar();
 					getchar();
 				}
 				else
