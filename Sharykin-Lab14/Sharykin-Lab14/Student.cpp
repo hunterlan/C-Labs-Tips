@@ -1,5 +1,20 @@
 #include"Student.h"
 
+ListOfStudents * PushAfterStudentToList(ListOfStudents * lst, Student getStudent, int pos)
+{
+	ListOfStudents * tmp, *p;
+	tmp = (ListOfStudents *)malloc(sizeof(ListOfStudents));
+	for (int i = 0; i < pos - 1; i++)
+	{
+		lst = lst->next;
+	}
+	p = lst->next;
+	lst->next = tmp;
+	tmp->student = getStudent;
+	tmp->next = p;
+	return lst;
+}
+
 bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 {
 	struct Student getStudent;
@@ -26,6 +41,52 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 	fclose(file);
 
 	return isSuccesful;
+}
+
+ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort)
+{
+	ListOfStudents * tmp1, * tmp2, *head;
+	bool isToSort;
+	head = lst;
+	
+	while ((tmp1 = lst->next) != NULL)
+	{
+		while(tmp1 != NULL)
+		{
+			isToSort = false;
+			if (chooseSort == 0)
+			{
+				if (tmp1->student.firstName < lst->student.firstName)
+					isToSort = true;
+			}
+			else if (chooseSort == 1)
+			{
+				if (tmp1->student.lastName < lst->student.lastName)
+					isToSort = true;
+			}
+			else if (chooseSort == 2)
+			{
+				if (tmp1->student.patronyminc < lst->student.patronyminc)
+					isToSort = true;
+			}
+			else
+			{
+				if (tmp1->student.group < lst->student.group)
+					isToSort = true;
+			}
+			if (isToSort)
+			{
+				tmp2 = lst->next;
+				lst = tmp1->next;
+				tmp1->next = tmp2;
+				lst->next = tmp1;
+			}
+			tmp1 = tmp1->next;
+		} 
+		lst = lst->next;
+	}
+	lst = head;
+	return lst;
 }
 
 void PushBackStudentToList(ListOfStudents ** lst, Student getStudent)

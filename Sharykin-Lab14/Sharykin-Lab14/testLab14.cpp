@@ -1,6 +1,6 @@
 #include"Student.h"
 
-const int COUNT_LIST_MENU = 8;
+const int COUNT_LIST_MENU = 10;
 
 void ShowListMenu(int kX);
 void ControlMenu();
@@ -34,9 +34,10 @@ int main()
 
 void ShowListMenu(int kX)
 {
-	char listMenu[COUNT_LIST_MENU][32] = { {"Read students from file"}, {"Input student and push"},
-	{"Input student and push it back"}, {"Delete last student"}, {"Write students to file"},
-	{"Find student"}, {"Show list of students"}, {"Exit"} };
+	char listMenu[COUNT_LIST_MENU][55] = { {"Read students from file"}, {"Input student and push"},
+	{"Input student and push it back"}, {"Input student and push it after student"},
+	{"Delete last student"}, {"Write students to file"}, {"Find student"}, {"Sort students"},
+	{"Show list of students"}, {"Exit"} };
 	for (int i = 0; i < COUNT_LIST_MENU; i++)
 	{
 		if (i == kX)
@@ -99,7 +100,7 @@ void ControlMenu()
 						PushStudentToList(&list, students[i]);
 					}
 				}
-				else if (kX == 1 || kX == 2 || kX == 5)
+				else if (kX == 1 || kX == 2  || kX == 3 || kX == 6)
 				{
 					Student student;
 					printf("Write the first name of student: ");
@@ -114,6 +115,13 @@ void ControlMenu()
 						PushStudentToList(&list, student);
 					else if(kX == 2)
 						PushBackStudentToList(&list, student);
+					else if (kX == 3)
+					{
+						int position;
+						printf("Put the position: ");
+						scanf("%d", &position);
+						list = PushAfterStudentToList(list, student, position);
+					}
 					else
 					{
 						if (!FindStudent(list, student))
@@ -122,9 +130,9 @@ void ControlMenu()
 							printf("Student was found");
 					}
 				}
-				else if (kX == 3)
-					PopStudentFromList(&list);
 				else if (kX == 4)
+					PopStudentFromList(&list);
+				else if (kX == 5)
 				{
 					char * path = (char *)malloc(255 * sizeof(char));
 					bool isWrite = true;
@@ -140,7 +148,11 @@ void ControlMenu()
 						}
 					} while (!isWrite);
 				}
-				else if (kX == 6)
+				else if (kX == 7)
+				{
+					list = SortWithPointer(list, 0);
+				}
+				else if (kX == 8)
 				{
 					ShowList(list);
 					printf("\nPress any key to continue...");
