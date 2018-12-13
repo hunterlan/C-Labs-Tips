@@ -1,10 +1,11 @@
 #include"Student.h"
 
-bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
+bool ReadStudents(struct Student ** students, int * sizeStudents, FILE * file)
 {
 #if _DEBUG
-	printf("%s\n", __TIMESTAMP__);
-	printf("%s\n", __FILE__);
+	time_t tTime = time(NULL);
+	printf("The functions is %s\n", __FUNCTION__);
+	printf("%s\n", ctime(&tTime));
 #endif
 	struct Student getStudent;
 	bool isSuccesful = false;
@@ -16,19 +17,18 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 		while (1)
 		{
 			*sizeStudents += 1;
-			students = (Student *)realloc(students, *sizeStudents * sizeof(Student));
+			*students = (Student *)realloc(*students, *sizeStudents * sizeof(Student));
 			fscanf(file, "%s", getStudent.firstName);
 			fscanf(file, "%s", getStudent.lastName);
 			fscanf(file, "%s", getStudent.patronyminc);
 			fscanf(file, "%s", getStudent.group);
-			students[k] = getStudent;
+			*(*students+k) = getStudent;
 			k++;
 			if (feof(file))
 				break;
 		}
+		fclose(file);
 	}
-	fclose(file);
-
 
 	return isSuccesful;
 }
@@ -36,8 +36,9 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 void FillStudents(struct Student * students, int * sizeStudents)
 {
 #if _DEBUG
-	printf("%s\n", __TIMESTAMP__);
-	printf("%s\n", __FILE__);
+	time_t tTime = time(NULL);
+	printf("The functions is %s\n", __FUNCTION__);
+	printf("%s\n", ctime(&tTime));
 #endif
 	Student student;
 	printf("Put the first name of student: ");
@@ -56,8 +57,9 @@ void FillStudents(struct Student * students, int * sizeStudents)
 bool WriteStudents(struct Student * students, int sizeStudents, FILE * file)
 {
 #if _DEBUG
-	printf("%s\n", __TIMESTAMP__);
-	printf("%s\n", __FILE__);
+	time_t tTime = time(NULL);
+	printf("The functions is %s\n", __FUNCTION__);
+	printf("%s\n", ctime(&tTime));
 #endif
 	bool isSuccsful = false;
 	if (file != NULL)
@@ -65,7 +67,7 @@ bool WriteStudents(struct Student * students, int sizeStudents, FILE * file)
 		isSuccsful = true;
 		for (int i = 0; i < sizeStudents; i++)
 		{
-			fscanf(file, "%s\n%s\n%s\n%s\n", students[i].firstName, students[i].lastName,
+			fprintf(file, "%s\n%s\n%s\n%s\n", students[i].firstName, students[i].lastName,
 				students[i].patronyminc, students[i].group);
 		}
 	}

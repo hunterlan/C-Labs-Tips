@@ -16,7 +16,7 @@ int main()
 		printf("Put the path: ");
 		scanf("%s", path);
 		file = fopen(path, "r");
-		if (!(ReadStudents(students, &sizeOfStudents, file)))
+		if (!(ReadStudents(&students, &sizeOfStudents, file)))
 		{
 			printf("Can't open the file.\n");
 			exit = false;
@@ -50,3 +50,4 @@ int main()
 #endif
 	return 0;
 }
+ 

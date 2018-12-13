@@ -4,9 +4,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include<cstddef>
-#include<stdlib.h>
+#include<cstdlib>
 #include<cstdio>
-#include<time.h>
+#include<ctime>
 
 struct Student {
 	char firstName[50];
@@ -15,8 +15,8 @@ struct Student {
 	char group[20];
 };
 
-bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file);
-void FillStudents(struct Student * students, int * sizeStudents);
+bool ReadStudents(struct Student ** students, int * sizeStudents, FILE * file);
+void FillStudents(struct Student ** students, int * sizeStudents);
 bool WriteStudents(struct Student * students, int sizeStudents, FILE * file);
 
 
