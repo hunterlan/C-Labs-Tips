@@ -29,6 +29,7 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 	}
 	fclose(file);
 
+
 	return isSuccesful;
 }
 
@@ -49,7 +50,7 @@ void FillStudents(struct Student * students, int * sizeStudents)
 	scanf("%s", student.group);
 	*sizeStudents++;
 	students = (Student *)realloc(students, *sizeStudents * sizeof(Student));
-	students[*sizeStudents - 1] = student;
+	students[*sizeStudents - 2] = student;
 }
 
 bool WriteStudents(struct Student * students, int sizeStudents, FILE * file)
