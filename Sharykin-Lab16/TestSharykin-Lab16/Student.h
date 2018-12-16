@@ -7,6 +7,7 @@
 #include<cstdlib>
 #include<cstdio>
 #include<ctime>
+#include<cstring>
 
 struct Student {
 	char firstName[50];
