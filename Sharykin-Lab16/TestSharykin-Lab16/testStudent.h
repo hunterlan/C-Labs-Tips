@@ -3,6 +3,6 @@
 
 #include"Student.h"
 
-void TestReadStudent(Student * student, int sizeStudent);
+void TestReadStudent(Student * students, int sizeStudent);
 
 #endif TESTSTUDENT_H_

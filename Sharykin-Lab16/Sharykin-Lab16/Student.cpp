@@ -33,7 +33,7 @@ bool ReadStudents(struct Student ** students, int * sizeStudents, FILE * file)
 	return isSuccesful;
 }
 
-void FillStudents(struct Student * students, int * sizeStudents)
+void FillStudents(struct Student ** students, int * sizeStudents)
 {
 #if _DEBUG
 	time_t tTime = time(NULL);
