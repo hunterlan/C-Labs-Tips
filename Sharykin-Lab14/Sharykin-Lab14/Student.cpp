@@ -45,12 +45,13 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 
 ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort)
 {
-	ListOfStudents * tmp1, * tmp2, *head;
-	bool isToSort, isHead = true;
+	ListOfStudents * tmp1, * tmp2, * tmp3, *head, * tmp4;
+	bool isToSort, isNear = true, isHead = true;
 	head = lst;
 	
 	while ((tmp1 = lst->next) != NULL)
 	{
+		tmp2 = lst->next;
 		while(tmp1 != NULL)
 		{
 			isToSort = false;
@@ -78,21 +79,50 @@ ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort)
 			{
 				if (isHead)
 				{
-					head = tmp1;
-					lst->next = tmp1->next;
-					head->next = lst;
-					lst = head;
-					isHead = false;
+					if (isNear)
+					{
+						head = tmp1;
+						lst->next = tmp1->next;
+						head->next = lst;
+						lst = head;
+					}
+					else
+					{
+						tmp3 = lst->next;
+						tmp1->next = tmp3;
+						head = tmp1;
+						tmp3->next = lst;
+						lst->next = tmp2->next;
+						lst = head;
+					}
 				}
 				else
 				{
-					tmp1->next = lst;
-					lst = tmp1;
+					if (isNear)
+					{
+						tmp4 = tmp1;
+						lst->next = tmp1->next;
+						tmp4->next = lst;
+						lst = tmp4;
+					}
+					else
+					{
+						tmp3 = lst->next;
+						tmp1->next = tmp3;
+						tmp4 = tmp1;
+						tmp3->next = lst;
+						lst->next = tmp2->next;
+						lst = tmp4;
+					}
 				}
+
 			}
 			tmp1 = tmp1->next;
+			tmp2 = tmp2->next;
+			isNear = false;
 		} 
 		lst = lst->next;
+		isHead = false;
 	}
 	lst = head;
 	return lst;

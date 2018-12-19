@@ -1,4 +1,5 @@
-﻿  Student.cpp
+﻿  stdafx.cpp
+  Student.cpp
 g:\gits\hunterlan\labs-work\sharykin-lab17\staticlibsharykinlab17\student.cpp(65): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
 g:\gits\hunterlan\labs-work\sharykin-lab17\staticlibsharykinlab17\student.cpp(66): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
 g:\gits\hunterlan\labs-work\sharykin-lab17\staticlibsharykinlab17\student.cpp(67): warning C4244: =: преобразование "double" в "float", возможна потеря данных
