@@ -46,7 +46,7 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort)
 {
 	ListOfStudents * tmp1, * tmp2, *head;
-	bool isToSort;
+	bool isToSort, isHead = true;
 	head = lst;
 	
 	while ((tmp1 = lst->next) != NULL)
@@ -56,30 +56,39 @@ ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort)
 			isToSort = false;
 			if (chooseSort == 0)
 			{
-				if (tmp1->student.firstName < lst->student.firstName)
+				if (strcmp(tmp1->student.firstName, lst->student.firstName) < 0)
 					isToSort = true;
 			}
 			else if (chooseSort == 1)
 			{
-				if (tmp1->student.lastName < lst->student.lastName)
+				if (strcmp(tmp1->student.lastName, lst->student.lastName) < 0)
 					isToSort = true;
 			}
 			else if (chooseSort == 2)
 			{
-				if (tmp1->student.patronyminc < lst->student.patronyminc)
+				if (strcmp(tmp1->student.patronyminc, lst->student.patronyminc) < 0)
 					isToSort = true;
 			}
 			else
 			{
-				if (tmp1->student.group < lst->student.group)
-					isToSort = true;
+				/*if (strcmp(tmp1->student.group > lst->student.group) < 0 )
+					isToSort = true;*/
 			}
 			if (isToSort)
 			{
-				tmp2 = lst->next;
-				lst = tmp1->next;
-				tmp1->next = tmp2;
-				lst->next = tmp1;
+				if (isHead)
+				{
+					head = tmp1;
+					lst->next = tmp1->next;
+					head->next = lst;
+					lst = head;
+					isHead = false;
+				}
+				else
+				{
+					tmp1->next = lst;
+					lst = tmp1;
+				}
 			}
 			tmp1 = tmp1->next;
 		} 
