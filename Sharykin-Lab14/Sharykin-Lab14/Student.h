@@ -7,6 +7,7 @@
 #include<stdlib.h>
 #include<cstdio>
 #include<conio.h>
+#include<cstring>
 
 struct Student {
 	char firstName[50];

@@ -40,7 +40,7 @@ void Student::ShowData()
 
 bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 {
-	char temp[5][10];
+	char temp[6][50];
 	bool isSuccesful = false;
 	if (file != NULL)
 	{
