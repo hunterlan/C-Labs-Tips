@@ -45,132 +45,136 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 
 ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort)
 {
-	//ListOfStudents * tmp1, * tmp2, * tmp3, *head, * tmp4;
-	//bool isToSort, isNear = true, isHead = true;
-	//head = lst;
-	//
-	//while ((tmp1 = lst->next) != NULL)
-	//{
-	//	isNear = true;
-	//	while(tmp1 != NULL)
-	//	{
-	//		isToSort = false;
-	//		if (chooseSort == 0)
-	//		{
-	//			if (strcmp(tmp1->student.firstName, lst->student.firstName) < 0)
-	//				isToSort = true;
-	//		}
-	//		else if (chooseSort == 1)
-	//		{
-	//			if (strcmp(tmp1->student.lastName, lst->student.lastName) < 0)
-	//				isToSort = true;
-	//		}
-	//		else if (chooseSort == 2)
-	//		{
-	//			if (strcmp(tmp1->student.patronyminc, lst->student.patronyminc) < 0)
-	//				isToSort = true;
-	//		}
-	//		else
-	//		{
-	//			/*if (strcmp(tmp1->student.group > lst->student.group) < 0 )
-	//				isToSort = true;*/
-	//		}
-	//		if (isToSort)
-	//		{
-	//			if (isHead)
-	//			{
-	//				if (isNear)
-	//				{
-	//					head = tmp1;
-	//					lst->next = tmp1->next;
-	//					head->next = lst;
-	//					lst = head;
-	//				}
-	//				else
-	//				{
-	//					tmp2 = tmp1->next;
-	//					tmp3 = lst->next;
-	//					tmp1->next = tmp3;
-	//					head = tmp1;
-	//					tmp3->next = lst;
-	//					lst->next = tmp2;
-	//					lst = head;
-	//				}
-	//			}
-	//			else
-	//			{
-	//				if (isNear)
-	//				{
-	//					tmp4 = tmp1;
-	//					lst->next = tmp1->next;
-	//					tmp4->next = lst;
-	//					lst = tmp4;
-	//				}
-	//				else
-	//				{
-	//					tmp2 = tmp1->next;
-	//					tmp3 = lst->next;
-	//					tmp1->next = tmp3;
-	//					tmp4 = tmp1;
-	//					tmp3->next = lst;
-	//					lst->next = tmp2;
-	//					lst = tmp4;
-	//				}
-	//			}
-	//		}
-	//		tmp1 = tmp1->next;
-	//		isNear = false;
-	//	} 
-	//	lst = lst->next;
-	//	isHead = false;
-	//}
-	//lst = head;
-	//return lst;
-
-	ListOfStudents * resultLst = NULL;
-	bool isToSort;
-	while (lst->next != NULL)
+	ListOfStudents * tmp1, * tmp2, *head;
+	bool isToSort, isNear = true, isHead = true;
+	head = lst;
+	tmp2 = lst;
+	
+	while ((tmp1 = tmp2->next) != NULL)
 	{
-		isToSort = false;
-		ListOfStudents * node = lst;
-		lst = lst->next;
-		if (chooseSort == 0)
+		//isNear = true;
+		while(tmp1 != NULL)
 		{
-			if (strcmp(node->student.firstName, lst->student.firstName) < 0)
-				isToSort = true;
-		}
-		else if (chooseSort == 1)
-		{
-			if (strcmp(node->student.lastName, lst->student.lastName) < 0)
-				isToSort = true;
-		}
-		else if (chooseSort == 2)
-		{
-			if (strcmp(node->student.patronyminc, lst->student.patronyminc) < 0)
-				isToSort = true;
-		}
-		else
-		{
-			/*if (strcmp(tmp1->student.group > lst->student.group) < 0 )
-				isToSort = true;*/
-		}
-
-		if (resultLst == NULL || isToSort)
-		{
-			node->next = resultLst;
-			resultLst = node;
-		}
-		else
-		{
-			ListOfStudents * currentObj = resultLst;
-			while (currentObj->next != NULL && !isToSort)
-				currentObj = currentObj->next;
-
-			node->next = currentObj->next;
-			currentObj->next = node;
-		}
+			isToSort = false;
+			if (chooseSort == 0)
+			{
+				if (strcmp(tmp1->student.firstName, tmp2->student.firstName) < 0)
+					isToSort = true;
+			}
+			else if (chooseSort == 1)
+			{
+				if (strcmp(tmp1->student.lastName, tmp2->student.lastName) < 0)
+					isToSort = true;
+			}
+			else if (chooseSort == 2)
+			{
+				if (strcmp(tmp1->student.patronyminc, tmp2->student.patronyminc) < 0)
+					isToSort = true;
+			}
+			else
+			{
+				/*if (strcmp(tmp1->student.group > lst->student.group) < 0 )
+					isToSort = true;*/
+			}
+			if (isToSort)
+			{
+				/*if (isHead)
+				{
+					if (isNear)
+					{
+						head = tmp1;
+						lst->next = tmp1->next;
+						head->next = lst;
+						lst = head;
+					}
+					else
+					{
+						tmp2 = tmp1->next;
+						tmp3 = lst->next;
+						tmp1->next = tmp3;
+						head = tmp1;
+						tmp3->next = lst;
+						lst->next = tmp2;
+						lst = head;
+					}
+				}
+				else
+				{
+					if (isNear)
+					{
+						tmp4 = tmp1;
+						lst->next = tmp1->next;
+						tmp4->next = lst;
+						lst = tmp4;
+					}
+					else
+					{
+						tmp2 = tmp1->next;
+						tmp3 = lst->next;
+						tmp1->next = tmp3;
+						tmp4 = tmp1;
+						tmp3->next = lst;
+						lst->next = tmp2;
+						lst = tmp4;
+					}
+				}
+			}
+			tmp1 = tmp1->next;
+			isNear = false;*/
+				head = Swap(tmp1, tmp2, head);
+			}
+			tmp1 = tmp1->next;
+		} 
+		tmp2 = tmp2->next;
+		//isHead = false;
 	}
-	return resultLst;
+	lst = head;
+	return lst;
+
+	//ListOfStudents * resultLst = NULL;
+	//bool isToSort;
+	//while (lst->next != NULL)
+	//{
+	//	isToSort = false;
+	//	ListOfStudents * node = lst;
+	//	lst = lst->next;
+	//	if (chooseSort == 0)
+	//	{
+	//		if (strcmp(node->student.firstName, lst->student.firstName) < 0)
+	//			isToSort = true;
+	//	}
+	//	else if (chooseSort == 1)
+	//	{
+	//		if (strcmp(node->student.lastName, lst->student.lastName) < 0)
+	//			isToSort = true;
+	//	}
+	//	else if (chooseSort == 2)
+	//	{
+	//		if (strcmp(node->student.patronyminc, lst->student.patronyminc) < 0)
+	//			isToSort = true;
+	//	}
+	//	else
+	//	{
+	//		/*if (strcmp(tmp1->student.group > lst->student.group) < 0 )
+	//			isToSort = true;*/
+	//	}
+
+	//	if (resultLst == NULL || isToSort)
+	//	{
+	//		node->next = resultLst;
+	//		resultLst = node;
+	//	}
+	//	else
+	//	{
+	//		ListOfStudents * currentObj = resultLst;
+	//		while (currentObj->next != NULL && !isToSort)
+	//			currentObj = currentObj->next;
+
+	//		node->next = currentObj->next;
+	//		currentObj->next = node;
+	//	}
+	//}
+	//return resultLst;
 }
 
 void PushBackStudentToList(ListOfStudents ** lst, Student getStudent)
@@ -204,6 +208,56 @@ ListOfStudents * GetLastElemInList(ListOfStudents * lst)
 		lst->next;
 
 	return lst;
+}
+
+ListOfStudents * Swap(ListOfStudents * lst1, ListOfStudents * lst2, ListOfStudents * head)
+{
+	struct ListOfStudents *prev1, *prev2, *next1, *next2;
+	prev1 = head;
+	prev2 = head;
+	if (prev1 == lst1)
+		prev1 = NULL;
+	else
+		while (prev1->next != lst1) // поиск узла предшествующего lst1
+			prev1 = prev1->next;
+	if (prev2 == lst2)
+		prev2 = NULL;
+	else
+		while (prev2->next != lst2) // поиск узла предшествующего lst2
+			prev2 = prev2->next;
+	next1 = lst1->next;  // узел следующий за lst1
+	next2 = lst2->next;  // узел следующий за lst2
+	if (lst2 == next1)
+	{                       // обмениваются соседние узлы
+		lst2->next = lst1;
+		lst1->next = next2;
+		if (lst1 != head)
+			prev1->next = lst2;
+	}
+	else
+		if (lst1 == next2)
+		{
+			// обмениваются соседние узлы
+			lst1->next = lst2;
+			lst2->next = next1;
+			if (lst2 != head)
+				prev2->next = lst2;
+		}
+		else
+		{
+			// обмениваются отстоящие узлы
+			if (lst1 != head)
+				prev1->next = lst2;
+			lst2->next = next1;
+			if (lst2 != head)
+				prev2->next = lst1;
+			lst1->next = next2;
+		}
+	if (lst1 == head)
+		return(lst2);
+	if (lst2 == head)
+		return(lst1);
+	return(head);
 }
 
 void PopStudentFromList(ListOfStudents ** lst)
