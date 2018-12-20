@@ -27,6 +27,7 @@ ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort);
 void PushBackStudentToList(ListOfStudents ** lst, Student getStudent);
 void PushStudentToList(ListOfStudents ** lst, Student getStudent);
 ListOfStudents * GetLastElemInList(ListOfStudents * lst);
+ListOfStudents * Swap(ListOfStudents * lst1, ListOfStudents * lst2, ListOfStudents * head);
 void PopStudentFromList(ListOfStudents ** lst);
 bool WriteStudents(ListOfStudents * lst, FILE * files);
 bool FindStudent(ListOfStudents * lst, Student findStudent);
