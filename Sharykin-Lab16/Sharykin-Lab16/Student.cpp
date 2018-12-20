@@ -50,8 +50,8 @@ void FillStudents(struct Student ** students, int * sizeStudents)
 	printf("Put the group of student: ");
 	scanf("%s", student.group);
 	*sizeStudents++;
-	students = (Student *)realloc(students, *sizeStudents * sizeof(Student));
-	students[*sizeStudents - 2] = student;
+	*students = (Student *)realloc(students, *sizeStudents * sizeof(Student));
+	*students[*sizeStudents - 2] = student;
 }
 
 bool WriteStudents(struct Student * students, int sizeStudents, FILE * file)
