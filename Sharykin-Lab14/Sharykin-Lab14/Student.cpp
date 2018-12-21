@@ -47,8 +47,8 @@ ListOfStudents * SortWithPointer(ListOfStudents * lst, int chooseSort)
 {
 	ListOfStudents * tmp1, * tmp2, *head;
 	bool isToSort, isNear = true, isHead = true;
-	head = lst;
-	tmp2 = lst;
+	head = Copy(lst);
+	tmp2 = Copy(lst);
 	
 	while ((tmp1 = tmp2->next) != NULL)
 	{
@@ -258,6 +258,22 @@ ListOfStudents * Swap(ListOfStudents * lst1, ListOfStudents * lst2, ListOfStuden
 	if (lst2 == head)
 		return(lst1);
 	return(head);
+}
+
+ListOfStudents * Copy(ListOfStudents * lst)
+{
+
+	ListOfStudents * copy, * iLst = lst;
+	copy = (ListOfStudents *)malloc(sizeof(ListOfStudents));
+	ListOfStudents * result = copy;
+	while (1)
+	{
+		copy->next = (ListOfStudents *)malloc(sizeof(ListOfStudents));
+		copy = iLst;
+		if (iLst == NULL || iLst->next == NULL)
+			break;
+	}
+	return result;
 }
 
 void PopStudentFromList(ListOfStudents ** lst)
