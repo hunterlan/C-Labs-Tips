@@ -1,12 +1,12 @@
 //"StaticLibSharykinLab17.lib"
 
-//#include "Student.h"
-//#pragma comment (lib, "StaticLibSharykinLab17.lib")
+#include "Student.h"
+#pragma comment (lib, "StaticLibSharykinLab17.lib")
 
 int main()
 {
 	//Для либа расскоментируйте 3 и 4 строку и с 9 по 30 строку
-	/*int sizeStudent = 0;
+	int sizeStudent = 0;
 	Student * students = (Student *)malloc(1 * sizeof(Student));
 	FILE * file = fopen("students.txt", "r+");
 	ReadStudents(students, &sizeStudent, file);
@@ -27,7 +27,7 @@ int main()
 	file = fopen("resultSorted.txt", "w+");
 	WriteStudents(students, sizeStudent, file);
 
-	free(students);*/
+	free(students);
 
 	return 0;
 }

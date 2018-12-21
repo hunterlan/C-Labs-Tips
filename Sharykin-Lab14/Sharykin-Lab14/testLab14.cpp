@@ -88,7 +88,7 @@ void ControlMenu()
 						printf("Put the path to file with students: ");
 						scanf("%s", path);
 						FILE * file = fopen(path, "r+");
-						if (!ReadStudents(students, &sizeStudents, file))
+						if (!ReadStudents(&students, &sizeStudents, file))
 						{
 							printf("Can't open this file.\n");
 							IsRead = false;

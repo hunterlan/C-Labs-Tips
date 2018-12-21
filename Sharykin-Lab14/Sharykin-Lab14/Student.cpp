@@ -15,7 +15,7 @@ ListOfStudents * PushAfterStudentToList(ListOfStudents * lst, Student getStudent
 	return lst;
 }
 
-bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
+bool ReadStudents(struct Student ** students, int * sizeStudents, FILE * file)
 {
 	struct Student getStudent;
 	bool isSuccesful = false;
@@ -27,12 +27,12 @@ bool ReadStudents(struct Student * students, int * sizeStudents, FILE * file)
 		while (1)
 		{
 			*sizeStudents += 1;
-			students = (Student *)realloc(students, *sizeStudents * sizeof(Student));
+			*students = (Student *)realloc(*students, *sizeStudents * sizeof(Student));
 			fscanf(file, "%s", getStudent.firstName);
 			fscanf(file, "%s", getStudent.lastName);
 			fscanf(file, "%s", getStudent.patronyminc);
 			fscanf(file, "%s", getStudent.group);
-			students[k] = getStudent;
+			*(*students + k) = getStudent;
 			k++;
 			if (feof(file))
 				break;
@@ -262,17 +262,11 @@ ListOfStudents * Swap(ListOfStudents * lst1, ListOfStudents * lst2, ListOfStuden
 
 ListOfStudents * Copy(ListOfStudents * lst)
 {
-
-	ListOfStudents * copy, * iLst = lst;
-	copy = (ListOfStudents *)malloc(sizeof(ListOfStudents));
-	ListOfStudents * result = copy;
-	while (1)
-	{
-		copy->next = (ListOfStudents *)malloc(sizeof(ListOfStudents));
-		copy = iLst;
-		if (iLst == NULL || iLst->next == NULL)
-			break;
-	}
+	if (lst == NULL)
+		return NULL;
+	ListOfStudents * result = (ListOfStudents *)malloc(sizeof(ListOfStudents));
+	result->student = lst->student;
+	result->next = Copy(lst->next);
 	return result;
 }
 

@@ -2,9 +2,9 @@
 #ifndef STUDENT_H_
 #define STUDENT_H_
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include<cstdio>
+#include<cstdlib>
+#include<cstring>
 
 struct Student
 {
