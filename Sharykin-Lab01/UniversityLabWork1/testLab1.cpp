@@ -1,30 +1,30 @@
-#include <string.h> 
+п»ї#include <string.h> 
 #include <stdio.h> 
 #include <stdlib.h> 
 /**
-* Структура «Студент»
+* РЎС‚СЂСѓРєС‚СѓСЂР° В«РЎС‚СѓРґРµРЅС‚В»
 */
 struct Student
 {
-	char firstName[20]; ///< І’мя студента  
-	char middleName[20]; ///< Прізвище студента  
-	char lastName[20]; ///< По батькові студента  
-	int *marks; ///< Оцінки студента 
+	char firstName[20]; ///< Р†вЂ™РјСЏ СЃС‚СѓРґРµРЅС‚Р°  
+	char middleName[20]; ///< РџСЂС–Р·РІРёС‰Рµ СЃС‚СѓРґРµРЅС‚Р°  
+	char lastName[20]; ///< РџРѕ Р±Р°С‚СЊРєРѕРІС– СЃС‚СѓРґРµРЅС‚Р°  
+	int *marks; ///< РћС†С–РЅРєРё СЃС‚СѓРґРµРЅС‚Р° 
 };
 /**
-* Створення даних про студента.
-*  * Функція генерує випадкові ПІБ на основі масивів символів для імен,
-* по батькові, прізвищ;
-* оцінки генеруються випадковим чином від 1 до 5, згенеровані дані
-* заповнюють поля структури Student
-* @return структура Student з заповненими полями
+* РЎС‚РІРѕСЂРµРЅРЅСЏ РґР°РЅРёС… РїСЂРѕ СЃС‚СѓРґРµРЅС‚Р°.
+*  * Р¤СѓРЅРєС†С–СЏ РіРµРЅРµСЂСѓС” РІРёРїР°РґРєРѕРІС– РџР†Р‘ РЅР° РѕСЃРЅРѕРІС– РјР°СЃРёРІС–РІ СЃРёРјРІРѕР»С–РІ РґР»СЏ С–РјРµРЅ,
+* РїРѕ Р±Р°С‚СЊРєРѕРІС–, РїСЂС–Р·РІРёС‰;
+* РѕС†С–РЅРєРё РіРµРЅРµСЂСѓСЋС‚СЊСЃСЏ РІРёРїР°РґРєРѕРІРёРј С‡РёРЅРѕРј РІС–Рґ 1 РґРѕ 5, Р·РіРµРЅРµСЂРѕРІР°РЅС– РґР°РЅС–
+* Р·Р°РїРѕРІРЅСЋСЋС‚СЊ РїРѕР»СЏ СЃС‚СЂСѓРєС‚СѓСЂРё Student
+* @return СЃС‚СЂСѓРєС‚СѓСЂР° Student Р· Р·Р°РїРѕРІРЅРµРЅРёРјРё РїРѕР»СЏРјРё
 */
 struct Student generateStudent(int marksCount)
 {
-	int const NAMES_COUNT = 3; // Кількість імен/прізвищ/по батькові  
-	char firstNames[NAMES_COUNT][20];  /* масив можливих імен */
-	const char middleNames[NAMES_COUNT][20] = { "Valerievich", "Valerievich", "Valerievich", }; /* масив по батькові */
-	char lastNames[NAMES_COUNT][20] = { "Sharykin",  "Sharykin",  "Sharykin" }; /* масив прізвищ */
+	int const NAMES_COUNT = 3; // РљС–Р»СЊРєС–СЃС‚СЊ С–РјРµРЅ/РїСЂС–Р·РІРёС‰/РїРѕ Р±Р°С‚СЊРєРѕРІС–  
+	char firstNames[NAMES_COUNT][20];  /* РјР°СЃРёРІ РјРѕР¶Р»РёРІРёС… С–РјРµРЅ */
+	const char middleNames[NAMES_COUNT][20] = { "Valerievich", "Valerievich", "Valerievich", }; /* РјР°СЃРёРІ РїРѕ Р±Р°С‚СЊРєРѕРІС– */
+	char lastNames[NAMES_COUNT][20] = { "Sharykin",  "Sharykin",  "Sharykin" }; /* РјР°СЃРёРІ РїСЂС–Р·РІРёС‰ */
 	struct Student result;
 	int i;
 	strcpy_s(firstNames[0], "Konstantin");
@@ -36,7 +36,7 @@ struct Student generateStudent(int marksCount)
 	result.marks = (int *)malloc(marksCount * 4);
 	for (i = 0; i < marksCount; i++)
 	{
-		result.marks[i] = rand() % 5 + 1; // оцінки від 1 до 5  
+		result.marks[i] = rand() % 5 + 1; // РѕС†С–РЅРєРё РІС–Рґ 1 РґРѕ 5  
 	}
 	return result;
 }
@@ -58,8 +58,8 @@ void showStudents(struct Student students[], int studentsCount, int marksCount)
 
 int main()
 {
-	const int STUDENTS_COUNT = 10; // Кількість студентів  
-	const int STUDENT_MARKS_COUNT = 5; // Кількість оцінок у студента  
+	const int STUDENTS_COUNT = 10; // РљС–Р»СЊРєС–СЃС‚СЊ СЃС‚СѓРґРµРЅС‚С–РІ  
+	const int STUDENT_MARKS_COUNT = 5; // РљС–Р»СЊРєС–СЃС‚СЊ РѕС†С–РЅРѕРє Сѓ СЃС‚СѓРґРµРЅС‚Р°  
 	struct Student students[10];
 	int i;
 	for (i = 0; i < STUDENTS_COUNT; i++)
