@@ -1,8 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="node2" href="$test_lab12_8cpp.html#aebf7e31d8ad3fc7498ad320a609b7c61" title="FillFromFileAStudent" alt="" coords="104,5,248,32"/>
-<area shape="rect" id="node3" href="$struct_student.html#a6d979a922d8091574b34ccbcc2cae04c" title="Student::ShowData" alt="" coords="109,56,243,83"/>
-<area shape="rect" id="node4" href="$test_lab12_8cpp.html#ab80b1413a057aba2ef8ed33c7d8bcd92" title="SortStudent" alt="" coords="131,107,221,133"/>
-<area shape="rect" id="node5" href="$test_lab12_8cpp.html#a1f27c02b27e10b4398e78f2abc136f0a" title="SortTwoCharElements" alt="" coords="297,56,448,83"/>
-<area shape="rect" id="node6" href="$test_lab12_8cpp.html#a071e90e34005ba27450015c767e0bbba" title="SortTwoIntElemnets" alt="" coords="303,107,442,133"/>
-<area shape="rect" id="node7" href="$test_lab12_8cpp.html#a76a901efd7b9b3bc42dd57736ae8e042" title="SortTwoFloatElements" alt="" coords="296,157,449,184"/>
-</map>

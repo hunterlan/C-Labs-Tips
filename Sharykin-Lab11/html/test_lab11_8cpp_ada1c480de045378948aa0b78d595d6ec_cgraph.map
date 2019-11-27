@@ -1,6 +1,0 @@
-<map id="DemoDecryption" name="DemoDecryption">
-<area shape="rect" id="node2" href="$_work_with_arr_8cpp.html#a801b79e5df598a6a4912275a815190ea" title="Функція, яка дешифровує текст Опис змінних: &#160;int size &#45; розмір одержуваємого символьного масиву &#160;char..." alt="" coords="172,56,256,83"/>
-<area shape="rect" id="node3" href="$_write_and_read_8cpp.html#adce63aaf773fb2eb733f1dd7e8c29514" title="Функція, яка підрухововає кількість символів у файлу Опис змінних: &#160;FILE * file &#45; файоловий поток &#160;lo..." alt="" coords="304,5,451,32"/>
-<area shape="rect" id="node4" href="$_write_and_read_8cpp.html#a734019f2391887cc4cf2c58b7befeaef" title="Функція, яка читає строки з файлу Опис змінних: &#160;FILE * file &#45; файоловий поток &#160;Послідовність дій: ..." alt="" coords="326,56,429,83"/>
-<area shape="rect" id="node5" href="$_write_and_read_8cpp.html#a4ce5a7503fdc8f231cc5c7ee78771558" title="Функція, яка записує текст у файл Опис змінних: &#160;FILE * file &#45; файоловий поток &#160;Послідовність дій: ..." alt="" coords="333,107,421,133"/>
-</map>
