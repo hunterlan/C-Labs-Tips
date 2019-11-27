@@ -1,4 +1,4 @@
-#ifndef TASKS_H
+п»ї#ifndef TASKS_H
 #define TASKS_H
 #include<stdlib.h>
 #include<stdio.h>
@@ -6,8 +6,8 @@
 
 /**
 * @file Tasks.h
-* Заголовчний файл Tasks
-* @author Шарикін Костянтин
+* Р—Р°РіРѕР»РѕРІС‡РЅРёР№ С„Р°Р№Р» Tasks
+* @author РЁР°СЂРёРєС–РЅ РљРѕСЃС‚СЏРЅС‚РёРЅ
 * @version 1.0
 * @date 2018.10.29
 */

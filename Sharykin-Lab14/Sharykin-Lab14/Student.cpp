@@ -1,4 +1,4 @@
-#include"Student.h"
+п»ї#include"Student.h"
 
 ListOfStudents * PushAfterStudentToList(ListOfStudents * lst, Student getStudent, int pos)
 {
@@ -218,17 +218,17 @@ ListOfStudents * Swap(ListOfStudents * lst1, ListOfStudents * lst2, ListOfStuden
 	if (prev1 == lst1)
 		prev1 = NULL;
 	else
-		while (prev1->next != lst1) // поиск узла предшествующего lst1
+		while (prev1->next != lst1) // РїРѕРёСЃРє СѓР·Р»Р° РїСЂРµРґС€РµСЃС‚РІСѓСЋС‰РµРіРѕ lst1
 			prev1 = prev1->next;
 	if (prev2 == lst2)
 		prev2 = NULL;
 	else
-		while (prev2->next != lst2) // поиск узла предшествующего lst2
+		while (prev2->next != lst2) // РїРѕРёСЃРє СѓР·Р»Р° РїСЂРµРґС€РµСЃС‚РІСѓСЋС‰РµРіРѕ lst2
 			prev2 = prev2->next;
-	next1 = lst1->next;  // узел следующий за lst1
-	next2 = lst2->next;  // узел следующий за lst2
+	next1 = lst1->next;  // СѓР·РµР» СЃР»РµРґСѓСЋС‰РёР№ Р·Р° lst1
+	next2 = lst2->next;  // СѓР·РµР» СЃР»РµРґСѓСЋС‰РёР№ Р·Р° lst2
 	if (lst2 == next1)
-	{                       // обмениваются соседние узлы
+	{                       // РѕР±РјРµРЅРёРІР°СЋС‚СЃСЏ СЃРѕСЃРµРґРЅРёРµ СѓР·Р»С‹
 		lst2->next = lst1;
 		lst1->next = next2;
 		if (lst1 != head)
@@ -237,7 +237,7 @@ ListOfStudents * Swap(ListOfStudents * lst1, ListOfStudents * lst2, ListOfStuden
 	else
 		if (lst1 == next2)
 		{
-			// обмениваются соседние узлы
+			// РѕР±РјРµРЅРёРІР°СЋС‚СЃСЏ СЃРѕСЃРµРґРЅРёРµ СѓР·Р»С‹
 			lst1->next = lst2;
 			lst2->next = next1;
 			if (lst2 != head)
@@ -245,7 +245,7 @@ ListOfStudents * Swap(ListOfStudents * lst1, ListOfStudents * lst2, ListOfStuden
 		}
 		else
 		{
-			// обмениваются отстоящие узлы
+			// РѕР±РјРµРЅРёРІР°СЋС‚СЃСЏ РѕС‚СЃС‚РѕСЏС‰РёРµ СѓР·Р»С‹
 			if (lst1 != head)
 				prev1->next = lst2;
 			lst2->next = next1;
@@ -272,13 +272,13 @@ ListOfStudents * Copy(ListOfStudents * lst)
 
 void PopStudentFromList(ListOfStudents ** lst)
 {
-	ListOfStudents *pFwd = NULL;  //текущий узел
-	ListOfStudents *pBwd = NULL;  //предыдущий узел
-	//Получили NULL
+	ListOfStudents *pFwd = NULL;  //С‚РµРєСѓС‰РёР№ СѓР·РµР»
+	ListOfStudents *pBwd = NULL;  //РїСЂРµРґС‹РґСѓС‰РёР№ СѓР·РµР»
+	//РџРѕР»СѓС‡РёР»Рё NULL
 	if (!lst) {
 		exit(-1);
 	}
-	//Список пуст
+	//РЎРїРёСЃРѕРє РїСѓСЃС‚
 	if (!(*lst)) {
 		exit(-1);
 	}

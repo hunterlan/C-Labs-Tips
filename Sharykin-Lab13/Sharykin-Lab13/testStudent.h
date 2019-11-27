@@ -1,10 +1,10 @@
-#ifndef TESTSTUDENT_H_
+п»ї#ifndef TESTSTUDENT_H_
 #define TESTSTUDENT_H_
 
 /**
 * @file testStudent.h
-* Прототипи функції для тестуванння
-* @author Шарикін Костянтин
+* РџСЂРѕС‚РѕС‚РёРїРё С„СѓРЅРєС†С–С— РґР»СЏ С‚РµСЃС‚СѓРІР°РЅРЅРЅСЏ
+* @author РЁР°СЂРёРєС–РЅ РљРѕСЃС‚СЏРЅС‚РёРЅ
 * @version 1.0
 * @date 2018.12.03
 */

@@ -1,4 +1,4 @@
-#ifndef OPSWITHARRAY_H
+п»ї#ifndef OPSWITHARRAY_H
 #define OPSWITHARRAY_H
 #include<stdlib.h>
 #include<time.h>
@@ -6,8 +6,8 @@
 
 /**
 * @file OpsWithArray.h
-* Описування прототипів функції для роботи з массивом
-* @author Шарикін Костянтин
+* РћРїРёСЃСѓРІР°РЅРЅСЏ РїСЂРѕС‚РѕС‚РёРїС–РІ С„СѓРЅРєС†С–С— РґР»СЏ СЂРѕР±РѕС‚Рё Р· РјР°СЃСЃРёРІРѕРј
+* @author РЁР°СЂРёРєС–РЅ РљРѕСЃС‚СЏРЅС‚РёРЅ
 * @version 0.0.1
 * @date 2018.10.01
 */

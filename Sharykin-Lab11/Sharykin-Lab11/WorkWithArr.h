@@ -1,4 +1,4 @@
-#ifndef WORKWITHARR_H_
+﻿#ifndef WORKWITHARR_H_
 #define WORKWITHARR_H_
 
 #include"WriteAndRead.h"

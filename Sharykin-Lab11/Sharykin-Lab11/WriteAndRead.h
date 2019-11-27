@@ -1,4 +1,4 @@
-#ifndef WRITEANDREAD_H_
+﻿#ifndef WRITEANDREAD_H_
 #define WRITEANDREAD_H_
 #include<stdio.h>
 #include<stdlib.h>
