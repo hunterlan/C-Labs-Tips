@@ -1,4 +1,7 @@
-﻿int main()
+﻿#define TRUE 1
+#define FALSE 0
+
+int main()
 {
 	/**  * @file testLab04.cpp
 	* Виконання задач з лабораторної работи
@@ -75,13 +78,13 @@
 	Найти НОД для двух чисел
 	*/
 	int resultFour = 1;
-	bool endCycle = false;
+	int endCycle = TRUE;
 	numeral1 = 2, numeral2 = 3;
-	while (endCycle == false)
+	while (endCycle == FALSE)
 	{
 		if (resultFour % numeral1 == 0 && resultFour % numeral2 == 0)
 		{
-			endCycle = true;
+			endCycle = TRUE;
 		}
 		else
 		{
@@ -93,17 +96,17 @@
 	Пятая программа
 	Определить, простое ли число
 	*/
-	bool isNumberSimple;
+	int isNumberSimple;
 	num = 439;
 	for (int i = 1; i < num; i++)
 	{
 		if (num % i == 0)
 		{
-			isNumberSimple = false;
+			isNumberSimple = FALSE;
 		}
 		else
 		{
-			isNumberSimple = true;
+			isNumberSimple = TRUE;
 		}
 	}
 	/*
@@ -112,7 +115,7 @@
 	*/
 
 	int ticket = 102300, sumFirstHalfTicket = 0, sumSecondHalfTicket = 0, countOps = 0;
-	bool isTicketLucky;
+	int isTicketLucky;
 	while (ticket != 0)
 	{
 		if (countOps < 3)
@@ -128,11 +131,11 @@
 	}
 	if (sumFirstHalfTicket == sumSecondHalfTicket)
 	{
-		isTicketLucky = true;
+		isTicketLucky = TRUE;
 	}
 	else
 	{
-		isTicketLucky = false;
+		isTicketLucky = FALSE;
 	}
 
 	/*

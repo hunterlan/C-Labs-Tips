@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="testLab04.cpp">
+    <ClCompile Include="testLab04.c">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
   </ItemGroup>
