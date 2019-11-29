@@ -41,11 +41,10 @@ int main()
 	c = a-- - --b  , якщо прапорець  f = false. 
 	*/
 	int a, b, c;
-	bool f;
+	int f = 0;
 	a = 4; 
 	b = 5;
-	f = false;
-	if (f = true)
+	if (f == 1)
 	{
 		c = a++ + ++b;
 	}
@@ -59,25 +58,25 @@ int main()
 	Визначити, чи є серед цифр заданого трьохзначного числа однакові цифри.
 	*/
 	int num = 445;
-	bool noDifferenceResult;
+	int noDifferenceResult;
 	numeral3 = num % 10;
 	numeral2 = (num / 10) % 10;
 	numeral1 = num / 100;
 	if (numeral1 == numeral2)
 	{
-		noDifferenceResult = true;
+		noDifferenceResult = 1;
 	}
 	else if(numeral1 == numeral3)
 	{
-		noDifferenceResult = true;
+		noDifferenceResult = 1;
 	}
 	else if (numeral2 == numeral3)
 	{
-		noDifferenceResult = true;
+		noDifferenceResult = 1;
 	}
 	else
 	{
-		noDifferenceResult = false;
+		noDifferenceResult = 0;
 	}
 	/*
 	Четвертая программа
