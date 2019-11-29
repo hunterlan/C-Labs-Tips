@@ -21,11 +21,11 @@
 * @return бульове значення isOverflow
 */
 
-bool CheckByteOverflow(int countByte, int countArgum, ...)
+int CheckByteOverflow(int countByte, int countArgum, ...)
 {
 	const int ONE_BYTE = 128, TWO_BYTE = 32767, FOUR_BYTE = 2147483647, 
 		EIGHT_BYTE = 9223372036854775807;
-	bool isOverflow = false;
+	int isOverflow = 0;
 	va_list argum; 
 	long long byte = 1;
 	//long long byte = arrayNumbers[0]; 
@@ -41,7 +41,7 @@ bool CheckByteOverflow(int countByte, int countArgum, ...)
 			byte *= va_arg(argum, long long);
 			if (byte > ONE_BYTE)
 			{
-				isOverflow = true;
+				isOverflow = 1;
 				break;
 			}
 		}
@@ -59,7 +59,7 @@ bool CheckByteOverflow(int countByte, int countArgum, ...)
 			byte *= va_arg(argum, long long);
 			if (byte > TWO_BYTE)
 			{
-				isOverflow = true;
+				isOverflow = 1;
 				break;
 			}
 		}
@@ -77,7 +77,7 @@ bool CheckByteOverflow(int countByte, int countArgum, ...)
 			byte *= va_arg(argum, long long);
 			if (byte > FOUR_BYTE)
 			{
-				isOverflow = true;
+				isOverflow = 1;
 				break;
 			}
 		}
@@ -95,7 +95,7 @@ bool CheckByteOverflow(int countByte, int countArgum, ...)
 			byte *= va_arg(argum, long long);
 			if (byte <= 0)
 			{
-				isOverflow = true;
+				isOverflow = 1;
 				break;
 			}
 		}
@@ -160,7 +160,7 @@ int ToPower(int num, int pow)
 * @return char convert - результат конвертації з маленької літери у велику
 */
 
-bool FromSmallToBig(char a)
+char FromSmallToBig(char a)
 {
 	const int DIFFERENCE = 32;
 	char convert;
@@ -171,7 +171,7 @@ bool FromSmallToBig(char a)
 int main()
 {
 
-	bool result; 
+	int result; 
 	int countByte = 4; 
 	int countArgum = 3;
 	result = CheckByteOverflow(countByte, countArgum, (long long)34560, (long long)112300, (long long)32000);
