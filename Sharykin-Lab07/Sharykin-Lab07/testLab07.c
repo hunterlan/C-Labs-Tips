@@ -8,9 +8,9 @@
 #include<stdlib.h>
 #include<time.h>
 
-const int N = 5;
-const int M = 5;
-const int sizeArr = M * N;
+#define N 5;
+#define M 5;
+#define sizeArr M * N;
 
 void GenRandNum(int * array, int size);
 void Tranforming(int * array, int choosenTask);
