@@ -3,7 +3,8 @@
 #include <crtdbg.h> 
 #define DEBUG_NEW new(_NORMAL_BLOCK, __FILE__, __LINE__) 
 #define new DEBUG_NEW 
-
+#define FALSE 0
+#define TRUE 1
 /**
 * @file testLab08.cpp
 * Виконная лабораторної роботи
@@ -115,7 +116,7 @@ void Task2()
 //11 задание
 void Task3()
 {
-	bool isArrEnd = false;
+	int isArrEnd = FALSE;
 
 	int sizeArr1 = 6, sizeArr2 = 10;
 	int * arrayNum1 = (int *)malloc(sizeArr1 * sizeof*arrayNum1), *arrayNum2 =
@@ -149,7 +150,7 @@ void Task3()
 				{
 					if ((i + 1) / sizeArr2 == 0)
 					{
-						isArrEnd = true;
+						isArrEnd = TRUE;
 						*(arrayNum3 + i) = *(arrayNum2 + i);
 					}
 					else
@@ -188,7 +189,7 @@ void Task3()
 				{
 					if ((i + 1) / sizeArr1 == 0)
 					{
-						isArrEnd = true;
+						isArrEnd = TRUE;
 						*(arrayNum3 + i) = *(arrayNum1 + i);
 					}
 					else
