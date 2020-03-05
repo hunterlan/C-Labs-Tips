@@ -23,6 +23,7 @@
     <ProjectGuid>{217D314D-74F7-4E25-B34C-E3C3EA34EDB1}</ProjectGuid>
     <RootNamespace>SharykinLabs15</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>Sharykin-Lab15</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
