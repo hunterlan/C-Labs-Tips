@@ -115,8 +115,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Tasks.cpp" />
-    <ClCompile Include="testLab10.cpp" />
+    <ClCompile Include="Tasks.c" />
+    <ClCompile Include="testLab10.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tasks.h" />

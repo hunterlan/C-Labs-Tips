@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="testLab13.cpp">
+    <ClCompile Include="testLab13.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="testStudent.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="testStudent.cpp">
+    <ClCompile Include="Student.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

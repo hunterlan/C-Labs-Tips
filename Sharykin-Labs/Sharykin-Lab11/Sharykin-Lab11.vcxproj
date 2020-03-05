@@ -115,9 +115,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="testLab11.cpp" />
-    <ClCompile Include="WorkWithArr.cpp" />
-    <ClCompile Include="WriteAndRead.cpp" />
+    <ClCompile Include="testLab11.c" />
+    <ClCompile Include="WorkWithArr.c" />
+    <ClCompile Include="WriteAndRead.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WorkWithArr.h" />
