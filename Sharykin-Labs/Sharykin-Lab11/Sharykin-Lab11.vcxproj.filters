@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="testLab11.cpp">
+    <ClCompile Include="WriteAndRead.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="WriteAndRead.cpp">
+    <ClCompile Include="WorkWithArr.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="WorkWithArr.cpp">
+    <ClCompile Include="testLab11.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
